@@ -189,7 +189,7 @@ $RECYCLE.BIN/
 # Mac crap
 .DS_Store
 
-
+	
 #############
 ## Python
 #############
@@ -226,6 +226,5 @@ pip-log.txt
 #############
 
 
-
-
 Hello world from Philipp
+Hallo World from Jan!
