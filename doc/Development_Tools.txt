@@ -1,0 +1,5 @@
+Version Control System: Git
+Version Control Server: Github
+Version Control Client: SourceTree
+Build Managment: Maven
+Java Compiler Version: 8
