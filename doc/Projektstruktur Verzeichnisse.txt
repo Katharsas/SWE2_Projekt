@@ -1,0 +1,19 @@
+Default Maven/JavaFx Verzeichnisstruktur
+----------------------------------------
+
+root
+	- .gitignore 	// Welche Ordner & Dateien ignoriert werdnen sollen von Git
+	- pom.xml		// Maven build configuration
+	- target		// Maven build output (binaries etc., eingetragen in gitignore)
+	- src			// Source
+		- main
+			- java		// Java source (package folders)
+			- resources	// Nicht-Java
+				- views	// Java-Fx xml
+				- css
+				- images
+				- config.properties	// config Datei für Kunden, falls benötigt
+				- logback.xml 		// logging framework settings
+		- test
+			- java		// Tests; packages wie in main (maven führt main & test zusammen beim testen)
+			- resources	// Alles was zusätzlich zum Testen gebraucht wird und kein Java Code ist
