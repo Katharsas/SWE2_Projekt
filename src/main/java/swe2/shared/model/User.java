@@ -1,5 +1,7 @@
 package swe2.shared.model;
 
+import java.util.Objects;
+
 /*
 Konstrukter
 
@@ -15,6 +17,7 @@ public abstract class User{
 	private String passwordHash;
 	
 	public User( String id, String passwordHash ){
+		Objects.requireNonNull(id);
 		this.id = id;
 		this.setPasswordHash( passwordHash );
 	}
@@ -46,6 +49,7 @@ public abstract class User{
 	}
 	
 	public void setPasswordHash( String passwordHash ){
+		Objects.requireNonNull(passwordHash);//throws NullPointerexception if arg is null
 		this.passwordHash = passwordHash;
 	}
 
