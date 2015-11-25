@@ -1,14 +1,14 @@
 package swe2.shared.model;
 
-import java.util.Objects;
-
-/*
-Konstrukter
-
-bool quals
-int hashCode
-Getter & Setter
-*/
+/**
+ * @author akolb
+ *
+ * INHALT
+ * Konstrukter
+ * bool quals
+ * int hashCode
+ * Getter & Setter
+ */
 
 
 public abstract class User{
@@ -17,7 +17,6 @@ public abstract class User{
 	private String passwordHash;
 	
 	public User( String id, String passwordHash ){
-		Objects.requireNonNull(id);
 		this.id = id;
 		this.setPasswordHash( passwordHash );
 	}
@@ -49,7 +48,6 @@ public abstract class User{
 	}
 	
 	public void setPasswordHash( String passwordHash ){
-		Objects.requireNonNull(passwordHash);//throws NullPointerexception if arg is null
 		this.passwordHash = passwordHash;
 	}
 
