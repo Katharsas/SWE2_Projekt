@@ -9,7 +9,7 @@ public class WasteAmount {
 	private final double weight;
 
 	public WasteAmount(double kilogram) {
-		if (kilogram < 0) throw negative;
+		if (kilogram < 0) throw new IllegalArgumentException("Waste amount cannot be negative!");
 		this.weight = kilogram;
 	}
 
@@ -22,10 +22,6 @@ public class WasteAmount {
 	}
 	
 	public WasteAmount sub(WasteAmount amount) {
-		if (this.weight < amount.weight) throw negative;
 		return new WasteAmount(this.weight - amount.weight);
-	}
-	
-	private static IllegalArgumentException negative =
-			new IllegalArgumentException("Waste amount cannot be negative!");
+	}		
 }
