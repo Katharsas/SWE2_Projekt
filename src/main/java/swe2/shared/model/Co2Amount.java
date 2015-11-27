@@ -1,6 +1,5 @@
 package swe2.shared.model;
 
-import java.math.BigDecimal;
 
 /**
  * @author jmothes
@@ -17,5 +16,9 @@ public class Co2Amount {
 
 	public Money calculateTaxCost() {
 		return taxCostPerUnit.multiply(new Money(amount));
+	}
+	
+	public Co2Amount add(Co2Amount amount) {
+		return new Co2Amount(this.amount + amount.amount);
 	}
 }
