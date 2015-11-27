@@ -6,6 +6,7 @@ class Client{
 	
 	ObjectInputStream reader; ObjectOutputStream writer;
 	String serverName; int serverPort;
+	Socket socket;
 
 	public Client( String serverName, int serverPort ){
 	
@@ -17,15 +18,26 @@ class Client{
 	public void connect() throws Exception{
 	
 	
-		Socket socket = new Socket( serverName, serverPort );
+		socket = new Socket( serverName, serverPort );
 		System.out.println( "Verbindung erstellt" );
 		
 		reader = new ObjectInputStream( socket.getInputStream() );
 		writer = new ObjectOutputStream( socket.getOutputStream() );
 		System.out.println( "Stream erstellt" );
+		writer.writeObject( "Test" );
 		
 	}//connect
 	
-
+	public void close() throws Exception{
+	
+		socket.close();
+	
+	}
+	
+	public void doStuff() throws Exception{
+	
+		writer.writeObject( "Test" );
+	
+	}
 
 }//class

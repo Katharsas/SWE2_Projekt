@@ -41,6 +41,7 @@ public class Server{
 			    public void run(){
             
                     try{
+                    	System.out.println( "Streams erstellt" );
                         reader = new ObjectInputStream( dataSocket.getInputStream() );
                         writer = new ObjectOutputStream( dataSocket.getOutputStream() );
                     }catch( IOException e ){ e.printStackTrace(); }
@@ -60,7 +61,15 @@ public class Server{
 	}//Constructor-----------------------------------------------
 
 	public void handle(){
-		System.out.println( "Doin' dirty" );
+		
+		String s;
+		
+		try{
+			s = (String) reader.readObject();
+			System.out.println( s );
+		}catch( Exception e){ e.printStackTrace(); }
+		
+
 	}
 
 }//class
