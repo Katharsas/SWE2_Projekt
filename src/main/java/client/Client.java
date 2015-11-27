@@ -22,8 +22,9 @@ class Client{
 		socket = new Socket( serverName, serverPort );
 		System.out.println( "Verbindung erstellt" );
 		
-		reader = new ObjectInputStream( socket.getInputStream() );
 		writer = new ObjectOutputStream( socket.getOutputStream() );
+		reader = new ObjectInputStream( socket.getInputStream() );
+		
 		System.out.println( "Stream erstellt" );
 		writer.writeObject( "Test" );
 		
@@ -36,9 +37,7 @@ class Client{
 	}
 	
 	public void doStuff() throws Exception{
-	
 		writer.writeObject( "Test" );
-	
 	}
 
 }//class
