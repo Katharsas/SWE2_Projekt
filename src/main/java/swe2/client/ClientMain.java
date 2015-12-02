@@ -1,4 +1,4 @@
-package client;
+package swe2.client;
 
 public class ClientMain{
 
