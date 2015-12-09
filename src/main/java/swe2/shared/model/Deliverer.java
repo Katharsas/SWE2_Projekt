@@ -9,8 +9,8 @@ import javax.persistence.Entity;
 @Entity
 public class Deliverer extends User{
 	
-	@SuppressWarnings("unused")
-	private Deliverer() {this(null,null);}
+	@Deprecated
+	protected Deliverer() {this("","");}
 	
 	public Deliverer(String id, String passwordHash) {
 		super(id, passwordHash);

@@ -1,5 +1,18 @@
-Version Control System: Git
-Version Control Server: Github
-Version Control Client: SourceTree
-Build Managment: Maven
-Java Compiler Version: 8
+Project Basis:
+--------------
+
+- Git (VCS)
+- Github (VCS Server)
+- SourceTree (VCS Client, recommended)
+- Maven (Build Managment)
+- Java 8
+- H2 (embedded SQL Database)
+
+
+Frameworks:
+-----------
+
+- Logback (Logging)
+- java.time (Date & Time)
+- Hibernate (ORM)
+- Google Guice (DI)

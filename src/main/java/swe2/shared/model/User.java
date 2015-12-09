@@ -1,5 +1,7 @@
 package swe2.shared.model;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
@@ -20,6 +22,7 @@ public abstract class User {
 	private String passwordHash;
 	
 	public User(String id, String passwordHash) {
+		Objects.requireNonNull(id);
 		this.id = id;
 		this.setPasswordHash(passwordHash);
 	}
@@ -50,6 +53,7 @@ public abstract class User {
 	}
 	
 	public void setPasswordHash(String passwordHash) {
+		Objects.requireNonNull(passwordHash);
 		this.passwordHash = passwordHash;
 	}
 }

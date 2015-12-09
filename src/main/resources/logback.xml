@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+	
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>%d{HH:mm:ss.SSS} %-5level %logger{200} - %msg %n</Pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.hibernate.type" level="ALL" />
+	<logger name="org.hibernate" level="DEBUG" />
+
+	<root level="INFO">
+		<appender-ref ref="consoleAppender" />
+	</root>
+
+</configuration>

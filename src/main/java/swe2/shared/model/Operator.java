@@ -9,8 +9,8 @@ import javax.persistence.Entity;
 @Entity
 public class Operator extends User{
 	
-	@SuppressWarnings("unused")
-	private Operator() {this(null,null);}
+	@Deprecated
+	protected Operator() {this("","");}
 	
 	public Operator(String id, String passwordHash) {
 		super(id, passwordHash);
