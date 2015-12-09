@@ -1,5 +1,7 @@
 package swe2.shared.model;
 
+import java.io.Serializable;
+
 /**
  * @author akolb
  *
@@ -9,7 +11,7 @@ package swe2.shared.model;
  * Getter & Setter
  */
 
-public class UniformWaste{
+public class UniformWaste implements Serializable {
 
 	private final WasteAmount wasteAmount;
 	private final WasteType wasteType;

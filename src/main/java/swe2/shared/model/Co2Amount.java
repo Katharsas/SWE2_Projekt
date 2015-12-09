@@ -1,11 +1,13 @@
 package swe2.shared.model;
 
+import java.io.Serializable;
+
 
 /**
  * @author jmothes
  */
 
-public class Co2Amount {
+public class Co2Amount implements Serializable {
 
 	private final double amount;
 	private final static Money taxCostPerUnit = new Money("0.1");

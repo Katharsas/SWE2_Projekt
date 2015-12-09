@@ -1,5 +1,6 @@
 package swe2.shared.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
@@ -7,7 +8,7 @@ import java.util.Objects;
  * @author jmothes
  */
 
-public class Money {
+public class Money implements Serializable {
 
 	final private BigDecimal amount;
 

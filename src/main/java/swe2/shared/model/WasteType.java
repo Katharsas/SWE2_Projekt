@@ -1,12 +1,13 @@
 package swe2.shared.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * @author jmothes
  */
 
-public enum WasteType {
+public enum WasteType implements Serializable {
 
 	RESIDUAL(0.6, new Money("0.47")),
 	PLASTIC(0.8, new Money("0.42")),

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  */
 
 @Entity
-public class Deliverer extends User{
+public class Deliverer extends User {
 	
 	@Deprecated
 	protected Deliverer() {this("","");}

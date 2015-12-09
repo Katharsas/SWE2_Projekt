@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import swe2.shared.model.Combustion;
 import swe2.shared.model.Delivery;
+import swe2.shared.model.User;
 import swe2.shared.model.WasteStorage;
 
 public interface DataAccess {
@@ -15,4 +16,7 @@ public interface DataAccess {
 	public boolean addDelivery(Delivery d);
 	
 	public WasteStorage getStorage();
+        
+        public User authenticate( String userId, String password );
 }
+

@@ -1,5 +1,6 @@
 package swe2.shared.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -15,7 +16,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="USERS")
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-public abstract class User {
+public abstract class User implements Serializable {
 	
 	@Id
 	private final String id;

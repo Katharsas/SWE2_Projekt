@@ -2,9 +2,17 @@ package swe2.server;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import swe2.shared.data.*;
+import swe2.shared.model.Combustion;
+import swe2.shared.model.Credentials;
+import swe2.shared.model.DataPackage;
+import swe2.shared.model.Delivery;
+import swe2.shared.model.RequestType;
+import swe2.shared.model.User;
 
 /**
  *TABLE_OF_CONTENTS
@@ -17,8 +25,6 @@ public class Server{
 	/*
 	INTERFACE dataToSave;
 	INTERFACE dataToSend
-	
-	Database data;
 	*/
 	
 	public Server(int port) throws Exception {
@@ -40,6 +46,7 @@ public class Server{
 		
 		final ObjectInputStream reader;
 		final ObjectOutputStream writer;
+                final static DataAccess data = null;
 		
 		public ServerConnection(Socket socket) {
 			try {
@@ -55,19 +62,55 @@ public class Server{
 		@Override
 		public void run() {
 			 //Do something
-            handle();
-            System.out.println("fertig");
+                        handle();
+                        System.out.println("fertig");
 		}
 		
 		public void handle(){
-			String s;
-			
-			try{
-				s = (String) reader.readObject();
-				System.out.println(s);
-			} catch(final Exception e) {
-				e.printStackTrace();
-			}
+                    //Paket entgegennehmen;
+                    DataPackage inbox = null;
+                    try{
+                        inbox = (DataPackage) reader.readObject();
+                    }catch( Exception e){e.printStackTrace();}
+                    
+                    //Paket oeffnen
+                    RequestType req = inbox.getRequestType();
+                    //Entscheiden was gemacht werden soll
+                    switch(req){
+                        case GET_DELIVERY:
+                            sendBack( new DataPackage( RequestType.DATA, (Serializable)data.getDeliveries() ) );
+                            break;
+                        case GET_COMBUSTION:
+                            sendBack( new DataPackage( RequestType.DATA, (Serializable)data.getCombustions() ) );
+                            break;
+                        case GET_WASTESTORAGE:
+                            sendBack( new DataPackage( RequestType.DATA, (Serializable)data.getStorage() ));
+                            break;
+                        case VALIDATION:
+                            Credentials cred = (Credentials) inbox.getData();
+                            User user = data.authenticate(cred.getUserId(), cred.getPassword());
+                            if(user != null)
+                                sendBack( new DataPackage( RequestType.GRANTED, user) );
+                            else
+                                sendBack( new DataPackage( RequestType.ERROR, null ) );
+                            break;
+                        case PUT_COMBUSTION:
+                            data.addCombustion( (Combustion) inbox.getData() );
+                            break;
+                        case PUT_DELIVERY:
+                            data.addDelivery( (Delivery) inbox.getData() );
+                            break;
+                        default:
+                            sendBack( "ERROR" );
+                            break;
+                    
+                    }
+                    
+                    
 		}
+                
+                public void sendBack( Serializable toSend ){
+                    
+                }
 	}
 }

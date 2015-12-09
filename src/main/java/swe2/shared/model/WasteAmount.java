@@ -1,10 +1,12 @@
 package swe2.shared.model;
 
+import java.io.Serializable;
+
 /**
  * @author jmothes
  */
 
-public class WasteAmount {
+public class WasteAmount implements Serializable {
 
 	private final double weight;
 

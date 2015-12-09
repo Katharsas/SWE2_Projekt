@@ -9,9 +9,10 @@ package swe2.shared.model;
  */
 
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Combustion{
+public class Combustion implements Serializable {
 
 	private final Co2Amount co2;
 	private final LocalDateTime dateTime;

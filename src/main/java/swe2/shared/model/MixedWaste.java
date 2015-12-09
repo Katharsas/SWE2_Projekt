@@ -1,10 +1,11 @@
 package swe2.shared.model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class MixedWaste {
+public class MixedWaste implements Serializable{
 	private final HashMap<WasteType, WasteAmount> typeToAmount = new HashMap<>();
 	
 	public MixedWaste() {

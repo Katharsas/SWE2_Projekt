@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  */
 
 @Entity
-public class Operator extends User{
+public class Operator extends User {
 	
 	@Deprecated
 	protected Operator() {this("","");}

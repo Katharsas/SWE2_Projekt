@@ -9,9 +9,10 @@ package swe2.shared.model;
  */
 
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Delivery{
+public class Delivery implements Serializable {
 
 	private final Money cost;
 	private final LocalDateTime dateTime;
