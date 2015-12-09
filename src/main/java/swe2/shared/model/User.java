@@ -41,6 +41,11 @@ public abstract class User {
 	public int hashCode() {
 		return this.getId().hashCode();
 	}
+	
+	@Override
+	public String toString() {
+		return "User[ID:" + this.getId() + "]";
+	}
 
 	//------------Getter & Setter ---------------------------
 	
