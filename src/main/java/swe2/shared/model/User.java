@@ -42,6 +42,11 @@ public abstract class User implements Serializable {
 	public int hashCode() {
 		return this.getId().hashCode();
 	}
+	
+	@Override
+	public String toString() {
+		return "User[ID:" + this.getId() + "]";
+	}
 
 	//------------Getter & Setter ---------------------------
 	
