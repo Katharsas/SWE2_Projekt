@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0001220703125" prefWidth="300.0000474121043" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0001220703125" prefWidth="300.0000474121043" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="swe2.control.deliverer.delivererController">
   <children>
     <HBox prefHeight="200.0001220703125" prefWidth="300.0000474121043" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
       <children>
@@ -23,19 +23,29 @@
         </VBox>
         <VBox alignment="BASELINE_RIGHT" minWidth="201.0" prefHeight="201.0" prefWidth="201.0" spacing="10.0">
           <children>
-            <TextField disable="true" prefWidth="200.0" />
-            <SplitMenuButton alignment="CENTER" mnemonicParsing="false" text="Select a type">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Paper" />
-                <MenuItem mnemonicParsing="false" text="Plastic" />
-                <MenuItem mnemonicParsing="false" text="Residual" />
-              </items>
+            <TextField fx:id="idField" disable="true" prefWidth="200.0" />
+            <HBox id="HBox" alignment="CENTER_RIGHT" spacing="5.0">
+              <children>
+                <Label fx:id="typeLabel" text="">
+                  <HBox.margin>
+                    <Insets right="10.0" />
+                  </HBox.margin>
+                </Label>
+                <SplitMenuButton fx:id="typeSelect" alignment="CENTER" mnemonicParsing="false" text="Select a type">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Paper" />
+                    <MenuItem mnemonicParsing="false" text="Plastic" />
+                    <MenuItem mnemonicParsing="false" text="Residual" />
+                  </items>
+                </SplitMenuButton>
+              </children>
+            </HBox>
+            <TextField fx:id="amountField" prefWidth="200.0" />
+            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#saveDelivery" text="Submit">
               <VBox.margin>
                 <Insets fx:id="x1" />
               </VBox.margin>
-            </SplitMenuButton>
-            <TextField prefWidth="200.0" />
-            <Button mnemonicParsing="false" text="Submit" VBox.margin="$x1" />
+            </Button>
           </children>
           <padding>
             <Insets right="10.0" top="55.0" />

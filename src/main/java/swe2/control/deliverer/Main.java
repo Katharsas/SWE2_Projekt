@@ -28,6 +28,7 @@ public class Main extends Application{
     private Stage primaryStage;
     private AnchorPane root;
     private User loggedInUser;
+    delivererController ctrl;
     
     
     @Override
@@ -40,11 +41,14 @@ public class Main extends Application{
         try{
             loader = new FXMLLoader( Main.class.getResource( "/view/delivery_mask.fxml" ) );
             root = (AnchorPane) loader.load();
-            primaryStage.setScene( new Scene( root ) );
-            primaryStage.show();
+            this.primaryStage.setScene( new Scene( root ) );
+            this.primaryStage.show();
         }catch( Exception e ){ e.printStackTrace(); }
         
-        delivererController ctrl = loader.getController();
+        ctrl = loader.getController();
+        ctrl.setDelivererStage( this.primaryStage );
+        ctrl.setMain( this );
+        
         showLoginMask( this.primaryStage );
         
     }
@@ -79,6 +83,8 @@ public class Main extends Application{
             ctrl.setType( Deliverer.class );
             
             loginStage.showAndWait();
+            //Nur nach erfolgreicher Anmeldung wird hier weitergemacht
+            this.pushUser( loggedInUser );
             
         }catch( Exception e ){ e.printStackTrace(); }
         
@@ -93,8 +99,16 @@ public class Main extends Application{
         launch( args );
     }
     
+    public void pushUser( User user ){
+        this.ctrl.setLoggedInUser( user );
+    }
+    
     public User getLoggedInUser(){
         return this.loggedInUser;
+    }
+    
+    public Stage getPrimaryStage(){
+        return this.primaryStage;
     }
     
     public void setLoggedInUser( User user ){
