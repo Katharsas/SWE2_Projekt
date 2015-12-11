@@ -13,6 +13,7 @@ import javax.persistence.Table;
  * @author akolb
  */
 
+@SuppressWarnings("serial")
 @Entity
 @Table(name="USERS")
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)

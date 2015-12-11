@@ -2,11 +2,15 @@ package swe2.shared.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Embeddable;
+
 
 /**
  * @author jmothes
  */
 
+@SuppressWarnings("serial")
+@Embeddable
 public class Co2Amount implements Serializable {
 
 	private final double amount;

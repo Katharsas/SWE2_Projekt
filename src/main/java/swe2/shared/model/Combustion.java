@@ -12,10 +12,23 @@ package swe2.shared.model;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@SuppressWarnings("serial")
+@Entity
+@Table(name="COMBUSTIONS")
 public class Combustion implements Serializable {
 
+	@Id @GeneratedValue
+	private Long id;
+	
 	private final Co2Amount co2;
 	private final LocalDateTime dateTime;
+	@ManyToOne
 	private final Operator operator;
 	private final MixedWaste waste;
 	

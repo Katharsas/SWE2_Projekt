@@ -6,6 +6,7 @@ import javax.persistence.Entity;
  * @author akolb
  */
 
+@SuppressWarnings("serial")
 @Entity
 public class Deliverer extends User {
 	

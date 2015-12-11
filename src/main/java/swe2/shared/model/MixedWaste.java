@@ -5,7 +5,11 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class MixedWaste implements Serializable{
+import javax.persistence.Embeddable;
+
+@SuppressWarnings("serial")
+@Embeddable
+public class MixedWaste implements Serializable {
 	private final HashMap<WasteType, WasteAmount> typeToAmount = new HashMap<>();
 	
 	public MixedWaste() {

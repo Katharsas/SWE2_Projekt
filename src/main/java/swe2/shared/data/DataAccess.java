@@ -17,6 +17,7 @@ public interface DataAccess {
 	
 	public WasteStorage getStorage();
         
-        public User authenticate( String userId, String password );
+	public <T extends User> T authenticate(String userId, String password,
+			Class<T> accountType);
 }
 

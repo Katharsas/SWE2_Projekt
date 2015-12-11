@@ -1,3 +1,4 @@
+package swe2.shared.model;
 import javax.persistence.EntityManager;
 
 import org.hibernate.Session;
@@ -10,7 +11,7 @@ import org.junit.Assert;
 import swe2.EntityManagerUtil;
 import swe2.shared.model.Operator;
 
-public class HibernateDemoTest {
+public class UserTest {
 
 	private EntityManager em;
 	
@@ -35,7 +36,7 @@ public class HibernateDemoTest {
 		tSave.commit();
 		
 		Transaction tLoad = session.beginTransaction();
-		Operator opResult = session.get(Operator.class, op1_id);
+		Operator opResult = (Operator) session.get(User.class, op1_id);
 		tLoad.commit();
 		
 		System.out.println(opResult);
