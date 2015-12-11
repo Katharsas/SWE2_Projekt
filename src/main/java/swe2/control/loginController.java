@@ -59,8 +59,10 @@ public class loginController {
                 
                  if( user == null )
                     main.showError( "Anmeldedaten inkorrekt!" );
-                 else
+                 else{
                      main.setLoggedInUser(user);
+                     loginStage.close();
+                 }
             }catch( Exception e ){
                 e.printStackTrace();
                 main.showError( "Verbindungsfehler!" );
