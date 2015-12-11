@@ -13,6 +13,9 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Co2Amount implements Serializable {
 
+	@Deprecated
+	protected Co2Amount() {this(0);}
+	
 	private final double amount;
 	private final static Money taxCostPerUnit = new Money("0.1");
 

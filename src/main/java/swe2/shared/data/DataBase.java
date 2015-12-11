@@ -30,33 +30,38 @@ public class DataBase implements DataAccess {
 	public DataBase() {
 		em = EntityManagerUtil.getEntityManagerFactory().createEntityManager();
 		session = em.unwrap(Session.class);
-		
-		String pwHashed = BCrypt.hashpw("root", BCrypt.gensalt());
-		Operator operator = new Operator("operator", pwHashed);
-		addUser(operator);
-		
-		Deliverer deliverer = new Deliverer("deliverer", pwHashed);
-		addUser(deliverer);
+		initDefaultUsers();
 	}
 	
-	private boolean addUser(User user) {
+	private void initDefaultUsers() {
+		String pwHashed = BCrypt.hashpw("root", BCrypt.gensalt());
+		
+		Operator operator = new Operator("operator", pwHashed);
+		saveUser(operator);
+		
+		Deliverer deliverer = new Deliverer("deliverer", pwHashed);
+		saveUser(deliverer);
+	}
+	
+	private boolean saveUser(User user) {
 		try {
 			save(user);
 			return true;
 		} catch(HibernateException e) {
-			logger.error("Saving combustion '" + user + "' failed!", e);
+			logger.error("Saving user '" + user + "' failed!", e);
 			return false;
 		}
 	}
 	
 	@Override
-	public Collection<Combustion> getCombustions() {
+	public synchronized Collection<Combustion> getCombustions() {
 		throw new UnsupportedOperationException();
 	}
 
 	@Override
 	public boolean addCombustion(Combustion combustion) {
 		try {
+			merge(combustion.getOperator());
 			save(combustion);
 			return true;
 		} catch(HibernateException e) {
@@ -66,29 +71,45 @@ public class DataBase implements DataAccess {
 	}
 
 	@Override
-	public Collection<Delivery> getDeliveries() {
+	public synchronized Collection<Delivery> getDeliveries() {
 		throw new UnsupportedOperationException();
 	}
 
 	@Override
-	public boolean addDelivery(Delivery d) {
-		throw new UnsupportedOperationException();
+	public boolean addDelivery(Delivery delivery) {
+		try {
+			merge(delivery.getDeliverer());
+			save(delivery);
+			return true;
+		} catch(HibernateException e) {
+			logger.error("Saving delivery '" + delivery + "' failed!", e);
+			return false;
+		}
 	}
 
 	@Override
-	public WasteStorage getStorage() {
-		throw new UnsupportedOperationException();
+	public synchronized WasteStorage getStorage() {
+		try {
+			return get(WasteStorage.class, WasteStorage.getId());
+		} catch(HibernateException e) {
+			logger.error("Getting WasteStorage failed!", e);
+			return null;
+		}
 	}
 
 	@Override
 	public <T extends User> T authenticate(String userId, String password, Class<T> clazz) {
 		if (!(clazz.equals(Operator.class) || clazz.equals(Deliverer.class)))
 			throw new IllegalArgumentException("Only Operator/Deliverer class argument allowed!");
+		logger.debug("Trying to get " + clazz.getSimpleName() + " from db.");
 		try {
 			final T user = get(clazz, userId);
+			if (user == null) logger.debug("Wrong userId: " + userId);
 			if (user != null && !BCrypt.checkpw(password, user.getPasswordHash())) {
+				logger.debug("Wrong password:" + password);
 				return null;
 			}
+			logger.debug("Returning " + user + " from db.");
 			return user;
 		} catch(HibernateException e) {
 			logger.error("Getting user failed!", e);
@@ -99,7 +120,7 @@ public class DataBase implements DataAccess {
 	/**
 	 * @see {@link org.hibernate.Session#get(Class, Serializable)}
 	 */
-	private <T> T get(Class<T> clazz, Serializable id) {
+	private synchronized <T> T get(Class<T> clazz, Serializable id) {
 		Transaction transaction = session.beginTransaction();
 		T result;
 		try {
@@ -107,7 +128,7 @@ public class DataBase implements DataAccess {
 			transaction.commit();
 		} catch (HibernateException e) {
 			transaction.rollback();
-			result = null;
+			throw e;
 		}
 		return result;
 	}
@@ -115,13 +136,30 @@ public class DataBase implements DataAccess {
 	/**
 	 * @see {@link org.hibernate.Session#save(Object)}
 	 */
-	private void save(Object o) throws HibernateException {
+	private synchronized void save(Object o) throws HibernateException {
 		Transaction transaction = session.beginTransaction();
 		try {
 			session.save(o);
 			transaction.commit();
 		} catch (HibernateException e) {
 			transaction.rollback();
+			throw e;
 		}
+	}
+	private synchronized void merge(Object o) throws HibernateException {
+		Transaction transaction = session.beginTransaction();
+		try {
+			session.merge(o);
+			transaction.commit();
+		} catch (HibernateException e) {
+			transaction.rollback();
+			throw e;
+		}
+	}
+	
+	@Override
+	protected void finalize() throws Throwable {
+		super.finalize();
+		em.close();
 	}
 }

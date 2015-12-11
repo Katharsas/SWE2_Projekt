@@ -36,12 +36,17 @@ public class UserTest {
 		tSave.commit();
 		
 		Transaction tLoad = session.beginTransaction();
-		Operator opResult = (Operator) session.get(User.class, op1_id);
+		Operator opResult = session.get(Operator.class, op1_id);
 		tLoad.commit();
 		
 		System.out.println(opResult);
 		Assert.assertEquals(op1.getId(), opResult.getId());
 		Assert.assertEquals(op1.getPasswordHash(), opResult.getPasswordHash());
+		
+		Transaction tLoadWrong = session.beginTransaction();
+		Operator opResultWrong = session.get(Operator.class, op1_id + "wrong");
+		tLoadWrong.commit();
+		Assert.assertNull(opResultWrong);
 		
 		Transaction tDelete = session.beginTransaction();
 		session.delete(opResult);

@@ -4,10 +4,12 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
+import javax.persistence.Embeddable;
+
 /**
  * @author jmothes
  */
-
+@Embeddable
 public class Money implements Serializable {
 
 	final private BigDecimal amount;

@@ -4,14 +4,14 @@
 	
 	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
-			<Pattern>%d{HH:mm:ss.SSS} %-5level %logger{200} - %msg %n</Pattern>
+			<Pattern>%d{HH:mm:ss.SSS} %-5level %logger{40}  -  %msg %n</Pattern>
 		</encoder>
 	</appender>
 
 <!-- 	<logger name="org.hibernate.type" level="ALL" /> -->
-<!-- 	<logger name="org.hibernate" level="DEBUG" /> -->
+	<logger name="org.hibernate" level="WARN" />
 
-	<root level="INFO">
+	<root level="DEBUG">
 		<appender-ref ref="consoleAppender" />
 	</root>
 

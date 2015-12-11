@@ -2,12 +2,19 @@ package swe2.shared.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Embeddable;
+
 /**
  * @author jmothes
  */
 
+@SuppressWarnings("serial")
+@Embeddable
 public class WasteAmount implements Serializable {
 
+	@Deprecated
+	protected WasteAmount() {this(0);}
+	
 	private final double weight;
 
 	public WasteAmount(double kilogram) {

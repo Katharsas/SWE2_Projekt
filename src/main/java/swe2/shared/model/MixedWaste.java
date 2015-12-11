@@ -2,15 +2,30 @@ package swe2.shared.model;
 
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Embeddable;
+import javax.persistence.EnumType;
+import javax.persistence.Inheritance;
+import javax.persistence.MapKeyColumn;
+import javax.persistence.MapKeyEnumerated;
+import javax.persistence.MapKeyJoinColumn;
+import javax.persistence.OneToMany;
 
 @SuppressWarnings("serial")
 @Embeddable
+@Inheritance
 public class MixedWaste implements Serializable {
-	private final HashMap<WasteType, WasteAmount> typeToAmount = new HashMap<>();
+	
+	public static MixedWaste EMPTY = new MixedWaste();
+	
+	@ElementCollection
+	@MapKeyEnumerated(EnumType.STRING)
+	private final Map<WasteType, WasteAmount> typeToAmount = new HashMap<>();
 	
 	public MixedWaste() {
 		for (final WasteType type : WasteType.values()) {
