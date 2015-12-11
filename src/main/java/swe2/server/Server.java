@@ -17,7 +17,11 @@ import swe2.shared.model.User;
 /**
  *TABLE_OF_CONTENTS
  *Construktor
- *void handle()
+ * 
+ * ServerConnection
+ * void run()
+ * void handle()
+ * void sendBack( Serializable )
  */
 
 public class Server{
@@ -92,16 +96,22 @@ public class Server{
                             if(user != null)
                                 sendBack( new DataPackage( RequestType.GRANTED, user) );
                             else
-                                sendBack( new DataPackage( RequestType.ERROR, null ) );
+                                sendBack( new DataPackage( RequestType.ERROR, "Keine Daten bekommen" ) );
                             break;
                         case PUT_COMBUSTION:
-                            data.addCombustion( (Combustion) inbox.getData() );
+                            if( data.addCombustion( (Combustion) inbox.getData() ) )
+                                sendBack( new DataPackage( RequestType.SUCCESS, "Combustionbericht wurde gespeichert" ) );
+                            else
+                                sendBack( new DataPackage( RequestType.ERROR, "Combustionbericht konnte nicht gespeichert werden" ) );
                             break;
                         case PUT_DELIVERY:
-                            data.addDelivery( (Delivery) inbox.getData() );
+                            if( data.addDelivery( (Delivery) inbox.getData() ) )
+                                sendBack( new DataPackage( RequestType.SUCCESS, "Deliverybericht wurde gespeichert" ) );
+                            else
+                                sendBack( new DataPackage( RequestType.ERROR, "Deliverybericht konnte nicht gespeichert werden" ) );
                             break;
                         default:
-                            sendBack( "ERROR" );
+                            sendBack( new DataPackage( RequestType.ERROR, "Der Server ist verwirrt" ) );
                             break;
                     
                     }
@@ -109,8 +119,13 @@ public class Server{
                     
 		}
                 
+                //Daten werden zurueckgeschickt und Verbindung beendet.
+                //Es wird immer etwas zurueckgeschickt, jede Verbindung endet mit dieser Methode.
                 public void sendBack( Serializable toSend ){
                     
+                    try{
+                        writer.writeObject( toSend );
+                    }catch( IOException e ){ e.printStackTrace(); }
                 }
 	}
 }

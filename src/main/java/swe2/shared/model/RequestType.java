@@ -22,6 +22,7 @@ public enum RequestType implements Serializable{
     //Speichern
     PUT_DELIVERY(),
     PUT_COMBUSTION(),
+    SUCCESS(),
     
     //Login
     VALIDATION(),

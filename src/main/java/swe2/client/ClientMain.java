@@ -11,7 +11,7 @@ public class ClientMain{
 		try{
 			client = new Client( serverName, Integer.parseInt(serverPort) );
 			client.connect();
-			//client.doStuff();
+
 			client.close();
 		}catch( Exception e ){ e.printStackTrace(); }
 	
