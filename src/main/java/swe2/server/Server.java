@@ -50,7 +50,7 @@ public class Server{
 		
 		final ObjectInputStream reader;
 		final ObjectOutputStream writer;
-                final static DataAccess data = null;
+                final static DataAccess data = new DataBase();
 		
 		public ServerConnection(Socket socket) {
 			try {
@@ -92,11 +92,12 @@ public class Server{
                             break;
                         case VALIDATION:
                             Credentials cred = (Credentials) inbox.getData();
-                            User user = data.authenticate(cred.getUserId(), cred.getPassword());
+                            System.out.println( cred.getUserId() + " " + cred.getPassword() );
+                            User user = data.authenticate(cred.getUserId(), cred.getPassword(), cred.getType() );
                             if(user != null)
                                 sendBack( new DataPackage( RequestType.GRANTED, user) );
                             else
-                                sendBack( new DataPackage( RequestType.ERROR, "Keine Daten bekommen" ) );
+                                sendBack( new DataPackage( RequestType.ERROR, "Inkorrekte Eingabe!" ) );
                             break;
                         case PUT_COMBUSTION:
                             if( data.addCombustion( (Combustion) inbox.getData() ) )
