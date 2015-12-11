@@ -6,7 +6,7 @@ import java.net.Socket;
 import swe2.shared.model.DataPackage;
 import swe2.shared.model.RequestType;
 
-class Client{
+public class Client{
 	
 	ObjectInputStream reader; ObjectOutputStream writer;
 	String serverName; int serverPort;
@@ -67,9 +67,8 @@ class Client{
            return (Serializable) returnedData.getData();	
 	}
         
-	public Serializable grantAccess( Serializable data ) throws Exception{
-            
-           writer.writeObject( new DataPackage( RequestType.PUT_DELIVERY, data ) );
+	public Serializable getAccess( Serializable data ) throws Exception{
+           writer.writeObject( new DataPackage( RequestType.VALIDATION, data ) );
            DataPackage returnedData = (DataPackage) reader.readObject();
            if(  returnedData.getRequestType() == RequestType.GRANTED )
                return (Serializable) returnedData.getData();

@@ -92,7 +92,7 @@ public class Server{
                             break;
                         case VALIDATION:
                             Credentials cred = (Credentials) inbox.getData();
-                            System.out.println( cred.getUserId() + " " + cred.getPassword() );
+                            //System.out.println( cred.getUserId() + " " + cred.getPassword() );
                             User user = data.authenticate(cred.getUserId(), cred.getPassword(), cred.getType() );
                             if(user != null)
                                 sendBack( new DataPackage( RequestType.GRANTED, user) );
