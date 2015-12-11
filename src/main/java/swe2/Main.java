@@ -6,7 +6,7 @@ public class Main {
 				() -> swe2.server.Main.main(new String[]{})
 			).start();
 		new Thread(
-				() -> swe2.client.ClientMain.main(new String[]{})
+				() -> swe2.control.deliverer.Main.main(new String[]{})
 			).start();
 	}
 }
