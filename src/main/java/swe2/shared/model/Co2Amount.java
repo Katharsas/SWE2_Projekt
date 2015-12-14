@@ -22,6 +22,17 @@ public class Co2Amount implements Serializable {
 	public Co2Amount(double kilogram) {
 		this.amount = kilogram;
 	}
+	
+	@Override
+	public int hashCode() {
+		return Double.valueOf(amount).hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null || getClass() != obj.getClass()) return false;
+		return amount == ((Co2Amount)obj).amount;
+	}
 
 	public Money calculateTaxCost() {
 		return taxCostPerUnit.multiply(new Money(amount));

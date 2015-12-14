@@ -10,6 +10,8 @@ import javax.persistence.Entity;
 @Entity
 public class Operator extends User {
 	
+	public static final Operator EMPTY = new Operator("", "");
+	
 	@Deprecated
 	protected Operator() {this("","");}
 	

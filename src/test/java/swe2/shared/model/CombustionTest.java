@@ -1,5 +1,7 @@
 package swe2.shared.model;
 
+import java.util.Collection;
+
 import javax.persistence.EntityManager;
 
 import org.hibernate.Session;
@@ -48,11 +50,42 @@ private EntityManager em;
 		session.save(combustion);
 		tSave.commit();
 		
-		//TODO load all sessions and find combustion
+		Transaction tGet = session.beginTransaction();
+		@SuppressWarnings("unchecked")
+		Collection<Combustion> results =
+				session.createCriteria(Combustion.class).list();
+		tGet.commit();
+		
+		Assert.assertTrue(results.contains(combustion));
+		for(Combustion c : results) {
+			if (c.equals(combustion)) {
+				Assert.assertEquals(combustion.getDateTime(), c.getDateTime());
+				Assert.assertEquals(combustion.getWaste(), c.getWaste());
+				Assert.assertEquals(combustion.getOperator(), c.getOperator());
+				Assert.assertEquals(combustion.getCo2(), c.getCo2());
+			}
+		}
 	}
 	
 	@Test
 	public void testCombustion() {
+		Operator operator = new Operator("operator", "op_hash");
 		
+		MixedWaste waste = new MixedWaste();
+		waste.addWaste(WasteType.PAPER, new WasteAmount(2));
+		waste.addWaste(WasteType.RESIDUAL, new WasteAmount(1));
+		
+		Combustion combustion = new Combustion(waste, operator);
+		Assert.assertEquals(operator, combustion.getOperator());
+		Assert.assertEquals(waste, combustion.getWaste());
+		
+		try {
+			new Combustion(null, operator);
+			Assert.assertTrue(false);
+		} catch(NullPointerException e) {}
+		try {
+			new Combustion(waste, null);
+			Assert.assertTrue(false);
+		} catch(NullPointerException e) {}
 	}
 }

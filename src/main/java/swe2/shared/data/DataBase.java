@@ -55,7 +55,11 @@ public class DataBase implements DataAccess {
 	
 	@Override
 	public synchronized Collection<Combustion> getCombustions() {
-		throw new UnsupportedOperationException();
+		try {
+			return getAll(Combustion.class);
+		} catch(HibernateException e) {
+			throw new HibernateException("Getting all combustions failed!", e);
+		}
 	}
 
 	@Override
@@ -72,7 +76,11 @@ public class DataBase implements DataAccess {
 
 	@Override
 	public synchronized Collection<Delivery> getDeliveries() {
-		throw new UnsupportedOperationException();
+		try {
+			return getAll(Delivery.class);
+		} catch(HibernateException e) {
+			throw new HibernateException("Getting all deliveries failed!", e);
+		}
 	}
 
 	@Override
@@ -92,11 +100,18 @@ public class DataBase implements DataAccess {
 		try {
 			return get(WasteStorage.class, WasteStorage.getId());
 		} catch(HibernateException e) {
-			logger.error("Getting WasteStorage failed!", e);
-			return null;
+			throw new HibernateException("Getting WasteStorage failed!", e);
 		}
 	}
 
+	/**
+	 * @see {@link BCrypt#checkpw(String, String)}
+	 * 
+	 * @param userId - User name/id
+	 * @param password - The cleartext password the user entered to login.
+	 * @param clazz - The user account type: Deliverer or Operator
+	 * @return Null if user does not exist or wrong password, User object otherwise.
+	 */
 	@Override
 	public <T extends User> T authenticate(String userId, String password, Class<T> clazz) {
 		if (!(clazz.equals(Operator.class) || clazz.equals(Deliverer.class)))
@@ -112,13 +127,12 @@ public class DataBase implements DataAccess {
 			logger.debug("Returning " + user + " from db.");
 			return user;
 		} catch(HibernateException e) {
-			logger.error("Getting user failed!", e);
-			return null;
+			throw new HibernateException("Getting user failed!", e);
 		}
 	}
 
 	/**
-	 * @see {@link org.hibernate.Session#get(Class, Serializable)}
+	 * @see {@link Session#get(Class, Serializable)}
 	 */
 	private synchronized <T> T get(Class<T> clazz, Serializable id) {
 		Transaction transaction = session.beginTransaction();
@@ -134,7 +148,25 @@ public class DataBase implements DataAccess {
 	}
 	
 	/**
-	 * @see {@link org.hibernate.Session#save(Object)}
+	 * Return a list of all Entities of given type.
+	 * @see {@link Session#createCriteria(Class)}
+	 */
+	@SuppressWarnings("unchecked")
+	private synchronized <T> Collection<T> getAll(Class<T> clazz) {
+		Transaction transaction = session.beginTransaction();
+		Collection<T> result;
+		try {
+			result = session.createCriteria(clazz).list();
+			transaction.commit();
+		} catch (HibernateException e) {
+			transaction.rollback();
+			throw e;
+		}
+		return result;
+	}
+	
+	/**
+	 * @see {@link Session#save(Object)}
 	 */
 	private synchronized void save(Object o) throws HibernateException {
 		Transaction transaction = session.beginTransaction();
@@ -146,6 +178,10 @@ public class DataBase implements DataAccess {
 			throw e;
 		}
 	}
+	
+	/**
+	 * @see {@link Session#merge(Object)}
+	 */
 	private synchronized void merge(Object o) throws HibernateException {
 		Transaction transaction = session.beginTransaction();
 		try {
@@ -159,7 +195,6 @@ public class DataBase implements DataAccess {
 	
 	@Override
 	protected void finalize() throws Throwable {
-		super.finalize();
 		em.close();
 	}
 }

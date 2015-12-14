@@ -6,22 +6,18 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Embeddable;
 import javax.persistence.EnumType;
 import javax.persistence.Inheritance;
-import javax.persistence.MapKeyColumn;
 import javax.persistence.MapKeyEnumerated;
-import javax.persistence.MapKeyJoinColumn;
-import javax.persistence.OneToMany;
 
 @SuppressWarnings("serial")
 @Embeddable
 @Inheritance
 public class MixedWaste implements Serializable {
 	
-	public static MixedWaste EMPTY = new MixedWaste();
+	public static final MixedWaste EMPTY = new MixedWaste();
 	
 	@ElementCollection
 	@MapKeyEnumerated(EnumType.STRING)
@@ -33,6 +29,17 @@ public class MixedWaste implements Serializable {
 		}
 	}
 	
+	@Override
+	public int hashCode() {
+		return typeToAmount.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null || getClass() != obj.getClass()) return false;
+		return typeToAmount.equals(((MixedWaste)obj).typeToAmount);
+	}
+
 	public void addWaste(WasteType type, WasteAmount waste) {
 		final WasteAmount newAmount = typeToAmount.get(type).add(waste);
 		typeToAmount.put(type, newAmount);

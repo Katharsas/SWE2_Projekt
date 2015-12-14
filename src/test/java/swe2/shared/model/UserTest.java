@@ -39,7 +39,6 @@ public class UserTest {
 		Operator opResult = session.get(Operator.class, op1_id);
 		tLoad.commit();
 		
-		System.out.println(opResult);
 		Assert.assertEquals(op1.getId(), opResult.getId());
 		Assert.assertEquals(op1.getPasswordHash(), opResult.getPasswordHash());
 		
@@ -63,10 +62,14 @@ public class UserTest {
 		Assert.assertEquals("user1", user1.getId());
 		Assert.assertEquals("user1_hash", user1.getPasswordHash());
 		
-		try {new Operator(null,"");}
-		catch(NullPointerException e) {Assert.assertTrue(true);}
-		try {new Operator("",null);}
-		catch(NullPointerException e) {Assert.assertTrue(true);}
+		try {
+			new Operator(null, "");
+			Assert.assertTrue(false);
+		} catch(NullPointerException e) {}
+		try {
+			new Operator("", null);
+			Assert.assertTrue(false);
+		} catch(NullPointerException e) {}
 		
 		Operator user2 = new Operator("user2", "user2_hash");
 		Assert.assertNotEquals(user1, user2);
