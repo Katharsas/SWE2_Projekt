@@ -10,8 +10,10 @@ import javax.persistence.Entity;
 @Entity
 public class Deliverer extends User {
 	
+	public static final Deliverer EMPTY = new Deliverer("", "");
+
 	@Deprecated
-	protected Deliverer() {this("","");}
+	protected Deliverer() {this(EMPTY.getId(), EMPTY.getPasswordHash());}
 	
 	public Deliverer(String id, String passwordHash) {
 		super(id, passwordHash);

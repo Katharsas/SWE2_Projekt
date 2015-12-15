@@ -10,8 +10,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import swe2.EntityManagerUtil;
 import swe2.shared.data.DataAccess;
@@ -19,10 +17,8 @@ import swe2.shared.data.DataBase;
 
 public class CombustionTest {
 
-private EntityManager em;
-
-	Logger logger = LoggerFactory.getLogger(this.getClass());
-	DataAccess data = new DataBase();
+	private EntityManager em;
+	private DataAccess data = new DataBase();
 	
 	@Before
 	public void beforeEach() {
@@ -65,19 +61,29 @@ private EntityManager em;
 				Assert.assertEquals(combustion.getCo2(), c.getCo2());
 			}
 		}
+		
+		Transaction tDelete = session.beginTransaction();
+		session.delete(combustion);
+		tDelete.commit();
 	}
 	
 	@Test
 	public void testCombustion() {
 		Operator operator = new Operator("operator", "op_hash");
+		Operator operatorClone = new Operator("operator", "op_hash");
 		
 		MixedWaste waste = new MixedWaste();
 		waste.addWaste(WasteType.PAPER, new WasteAmount(2));
 		waste.addWaste(WasteType.RESIDUAL, new WasteAmount(1));
 		
+		MixedWaste wasteClone = new MixedWaste();
+		wasteClone.addWaste(WasteType.PAPER, new WasteAmount(2));
+		wasteClone.addWaste(WasteType.RESIDUAL, new WasteAmount(1));
+		
 		Combustion combustion = new Combustion(waste, operator);
-		Assert.assertEquals(operator, combustion.getOperator());
-		Assert.assertEquals(waste, combustion.getWaste());
+
+		Assert.assertEquals(operatorClone, combustion.getOperator());
+		Assert.assertEquals(wasteClone, combustion.getWaste());
 		
 		try {
 			new Combustion(null, operator);

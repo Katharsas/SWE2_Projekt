@@ -21,6 +21,17 @@ public class WasteAmount implements Serializable {
 		if (kilogram < 0) throw new IllegalArgumentException("Waste amount cannot be negative!");
 		this.weight = kilogram;
 	}
+	
+	@Override
+	public int hashCode() {
+		return Double.valueOf(weight).hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null ||getClass() != obj.getClass()) return false;
+		return weight == ((WasteAmount)obj).weight;
+	}
 
 	public double inKilogram() {
 		return weight;

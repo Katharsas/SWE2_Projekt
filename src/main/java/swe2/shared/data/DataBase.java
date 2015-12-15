@@ -22,7 +22,7 @@ import swe2.shared.model.WasteStorage;
 
 public class DataBase implements DataAccess {
 
-	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	private static final Logger logger = LoggerFactory.getLogger(DataBase.class);
 	
 	private EntityManager em;
 	private Session session;

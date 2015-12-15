@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class WasteStorage extends MixedWaste {
 	
 	@Id
-	public final long id = WasteStorage.getId();
+	public final Long id = WasteStorage.getId();
 	
 	public WasteStorage() {
 		super();

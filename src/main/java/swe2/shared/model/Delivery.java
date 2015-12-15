@@ -11,39 +11,51 @@ package swe2.shared.model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@SuppressWarnings("serial")
+@Entity
 public class Delivery implements Serializable {
-
+	
+	@Deprecated
+	protected Delivery() {this(UniformWaste.EMPTY, Deliverer.EMPTY);}
+	
+	@Id @GeneratedValue
+	private Long id;
+	
 	private final Money cost;
 	private final LocalDateTime dateTime;
 	private final Deliverer deliverer;
 	private final UniformWaste waste;
 	
-	public Delivery( UniformWaste waste, Deliverer deliverer ){
-	
+	public Delivery(UniformWaste waste, Deliverer deliverer) {
+		Objects.requireNonNull(waste);
+		Objects.requireNonNull(deliverer);
 		this.waste = waste;
 		this.deliverer = deliverer;
 		this.cost = waste.calculateDeliveryCost();
 		dateTime = LocalDateTime.now();
-	
 	}
 	
 	//------- Getter & Setter -------------
 	
-	public Money getCost(){
+	public Money getCost() {
 		return this.cost;
 	}
 	
-	public LocalDateTime getDateTime(){
+	public LocalDateTime getDateTime() {
 		return this.dateTime;
 	}
 	
-	public Deliverer getDeliverer(){
+	public Deliverer getDeliverer() {
 		return this.deliverer;
 	}
 	
-	public UniformWaste getWaste(){
+	public UniformWaste getWaste() {
 		return this.waste;
 	}
-
 }

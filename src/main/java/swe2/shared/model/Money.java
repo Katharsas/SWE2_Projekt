@@ -9,11 +9,15 @@ import javax.persistence.Embeddable;
 /**
  * @author jmothes
  */
+@SuppressWarnings("serial")
 @Embeddable
 public class Money implements Serializable {
 
 	final private BigDecimal amount;
 
+	@Deprecated
+	protected Money() {this(0);}
+	
 	public Money(int euro) {
 		this.amount = new BigDecimal(euro);
 	}
@@ -30,6 +34,17 @@ public class Money implements Serializable {
 	public Money(BigDecimal euro) {
 		Objects.requireNonNull(euro);
 		this.amount = euro;
+	}
+	
+	@Override
+	public int hashCode() {
+		return amount.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null || getClass() != obj.getClass()) return false;
+		return amount.equals(((Money)obj).amount);
 	}
 
 	public BigDecimal inEuro() {
