@@ -1,4 +1,4 @@
-package swe2.shared.data;
+package swe2.server.data;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -23,6 +23,10 @@ import swe2.shared.model.WasteStorage;
 public class DataBase implements DataAccess {
 
 	private static final Logger logger = LoggerFactory.getLogger(DataBase.class);
+	
+	//Singleton pattern
+	private static final DataBase instance = new DataBase();
+	public static DataBase getInstance() {return instance;}
 	
 	private EntityManager em;
 	private Session session;
@@ -101,6 +105,17 @@ public class DataBase implements DataAccess {
 			return get(WasteStorage.class, WasteStorage.getId());
 		} catch(HibernateException e) {
 			throw new HibernateException("Getting WasteStorage failed!", e);
+		}
+	}
+	
+	@Override
+	public boolean saveStorage(WasteStorage storage) {
+		try {
+			merge(storage);
+			return true;
+		} catch(HibernateException e) {
+			logger.error("Saving WasteStorage failed!", e);
+			return false;
 		}
 	}
 

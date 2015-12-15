@@ -1,44 +1,53 @@
 package swe2.client;
+import java.io.Closeable;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.net.Socket;
-import swe2.shared.model.DataPackage;
-import swe2.shared.model.RequestType;
 
-public class Client{
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import swe2.shared.net.ConnectionDefaults;
+import swe2.shared.net.DataPackage;
+import swe2.shared.net.RequestType;
+
+public class ClientConnection implements Closeable {
 	
-	ObjectInputStream reader; ObjectOutputStream writer;
-	String serverName; int serverPort;
-	Socket socket;
+	private static final Logger logger = LoggerFactory.getLogger(ClientConnection.class);
+	
+	private final String serverIp;
+	private final int serverPort;
+	
+	private Socket socket;
+	private ObjectInputStream reader;
+	private ObjectOutputStream writer;
         
-        public Client(){
-            this.serverName = "localhost";
-            this.serverPort = 6666;
-        }
+	public ClientConnection(){
+	    this(ConnectionDefaults.IP, ConnectionDefaults.PORT);
+	}
 
-	public Client( String serverName, int serverPort ){
+	public ClientConnection( String serverName, int serverPort ){
 	
-		this.serverName = serverName;
+		this.serverIp = serverName;
 		this.serverPort = serverPort;
 	
 	}//Constructor------------------------
 	
-	public void connect() throws Exception{
-	
-	
-		socket = new Socket( serverName, serverPort );
-		System.out.println( "Verbindung erstellt" );
+	public void connect() throws IOException {
+		socket = new Socket( serverIp, serverPort );
+		logger.info("Client connection to server created");
 		
 		writer = new ObjectOutputStream( socket.getOutputStream() );
 		reader = new ObjectInputStream( socket.getInputStream() );
-		
-		System.out.println( "Stream erstellt" );
+		logger.info("Streams created & connected");
 		//writer.writeObject( "Test" );
 		
 	}//connect
 	
-	public void close() throws Exception{
+	@Override
+	public void close() throws IOException {
 		socket.close();
 	}
         
@@ -50,28 +59,28 @@ public class Client{
             
            writer.writeObject( new DataPackage( RequestType.GET_COMBUSTION, "Need Combustion" ) );
            DataPackage returnedData = (DataPackage) reader.readObject();
-           return (Serializable) returnedData.getData();	
+           return returnedData.getData();	
 	}
         
         public Serializable getDeliveries() throws Exception{
             
            writer.writeObject( new DataPackage( RequestType.GET_DELIVERY, "Need Delivery" ) );
            DataPackage returnedData = (DataPackage) reader.readObject();
-           return (Serializable) returnedData.getData();	
+           return returnedData.getData();	
 	}
         
         public Serializable getWasteStorage() throws Exception{
             
            writer.writeObject( new DataPackage( RequestType.GET_WASTESTORAGE, "Need WasteStorage" ) );
            DataPackage returnedData = (DataPackage) reader.readObject();
-           return (Serializable) returnedData.getData();	
+           return returnedData.getData();	
 	}
         
 	public Serializable getAccess( Serializable data ) throws Exception{
            writer.writeObject( new DataPackage( RequestType.VALIDATION, data ) );
            DataPackage returnedData = (DataPackage) reader.readObject();
            if(  returnedData.getRequestType() == RequestType.GRANTED )
-               return (Serializable) returnedData.getData();
+               return returnedData.getData();
            else
                System.out.println( returnedData.getData() );
                return null;	

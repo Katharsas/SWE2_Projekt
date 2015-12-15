@@ -1,4 +1,4 @@
-package swe2.shared.data;
+package swe2.server.data;
 
 import java.util.Collection;
 
@@ -16,6 +16,7 @@ public interface DataAccess {
 	public boolean addDelivery(Delivery d);
 	
 	public WasteStorage getStorage();
+	public boolean saveStorage(WasteStorage storage);
         
 	public <T extends User> T authenticate(String userId, String password,
 			Class<T> accountType);

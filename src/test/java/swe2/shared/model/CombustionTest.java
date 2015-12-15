@@ -12,8 +12,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import swe2.EntityManagerUtil;
-import swe2.shared.data.DataAccess;
-import swe2.shared.data.DataBase;
+import swe2.server.data.DataAccess;
+import swe2.server.data.DataBase;
 
 public class CombustionTest {
 
