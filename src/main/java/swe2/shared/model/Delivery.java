@@ -11,6 +11,7 @@ package swe2.shared.model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -39,6 +40,11 @@ public class Delivery implements Serializable {
 		this.deliverer = deliverer;
 		this.cost = waste.calculateDeliveryCost();
 		dateTime = LocalDateTime.now();
+	}
+	
+	@Override
+	public String toString() {
+		return "Delivery["+waste+" Time:"+dateTime.format(DateTimeFormatter.ISO_LOCAL_TIME)+"]";
 	}
 	
 	//------- Getter & Setter -------------

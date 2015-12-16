@@ -1,6 +1,7 @@
 package swe2.shared.model;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 
 import javax.persistence.Embeddable;
 
@@ -31,6 +32,11 @@ public class WasteAmount implements Serializable {
 	public boolean equals(Object obj) {
 		if (obj == null ||getClass() != obj.getClass()) return false;
 		return weight == ((WasteAmount)obj).weight;
+	}
+
+	@Override
+	public String toString() {
+		return new DecimalFormat("#.##").format(weight);
 	}
 
 	public double inKilogram() {

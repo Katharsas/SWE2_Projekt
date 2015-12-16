@@ -50,6 +50,11 @@ public class UniformWaste implements Serializable {
 		return wasteType == other.wasteType && wasteAmount.equals(other.wasteAmount);
 	}
 
+	@Override
+	public String toString() {
+		return "UniformWaste[Type:"+wasteType.name()+" Kg:"+wasteAmount+"]";
+	}
+
 	public Money calculateDeliveryCost() {
 		return wasteType.getDeliveryCost(wasteAmount);
 	}
@@ -58,5 +63,9 @@ public class UniformWaste implements Serializable {
 	
 	public WasteAmount getWasteAmount() {
 		return this.wasteAmount;
+	}
+
+	public WasteType getWasteType() {
+		return wasteType;
 	}
 }
