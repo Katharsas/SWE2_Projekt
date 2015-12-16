@@ -14,7 +14,7 @@ import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import swe2.client.ClientConnection;
-import swe2.client.deliverer.Main;
+import swe2.client.deliverer.JavaFxGui;
 import swe2.shared.model.User;
 
 /**
@@ -24,7 +24,7 @@ import swe2.shared.model.User;
 public class DelivererController {
     
     private Stage delivererStage;
-    private Main main;
+    private JavaFxGui main;
     private User loggedInUser;
     private ClientConnection client;
     
@@ -62,7 +62,7 @@ public class DelivererController {
     }
     
     
-    public void setMain( Main main ){
+    public void setMain( JavaFxGui main ){
         this.main = main;
     }
     

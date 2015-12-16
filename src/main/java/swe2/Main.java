@@ -6,7 +6,7 @@ public class Main {
 				() -> swe2.server.net.Server.main(new String[]{})
 			).start();
 		new Thread(
-				() -> swe2.client.deliverer.Main.main(new String[]{})
+				() -> swe2.client.deliverer.JavaFxGui.main(new String[]{})
 			).start();
 	}
 }
