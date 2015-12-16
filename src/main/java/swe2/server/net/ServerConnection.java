@@ -83,7 +83,6 @@ public class ServerConnection implements Runnable {
 				sendBack(new DataPackage(RequestType.ERROR, "Combustionbericht konnte nicht gespeichert werden"));
 			break;
 		case PUT_DELIVERY:
-                    System.out.println("angekommen");
 			if (data.addDelivery((Delivery) inbox.getData()))
 				sendBack(new DataPackage(RequestType.SUCCESS, "Deliverybericht wurde gespeichert"));
 			else

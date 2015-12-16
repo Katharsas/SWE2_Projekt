@@ -75,15 +75,17 @@ public class DelivererController {
             WasteType type = getWasteType( (String) typeSelect.getValue() );
             WasteAmount amount = null;
             try{
-                amount = new WasteAmount( Integer.parseInt( amountField.getText() ) ) ;
+                amount = new WasteAmount( Double.parseDouble( amountField.getText() ) ) ;
             }catch( IllegalArgumentException e ){
                 e.printStackTrace();
-                main.showError( "Nur Zahlen bei Menge (kein kg, etc.)!" );
+                main.showError( "Nur Zahlenangaben bei Menge (kein \"kg\", etc.) z.B 4.2!" );
                 return;
             }
             
             try{
-            String feedback = client.saveDelivery(
+                client = new ClientConnection();
+                client.connect();
+                String feedback = client.saveDelivery(
                         new Delivery(
                                 new UniformWaste(
                                         type,
@@ -92,6 +94,9 @@ public class DelivererController {
                                 loggedInUser
                         )
                 );
+                client.close();
+				main.showError( "Speichern erfolgreich" );
+				System.exit(0);
             }catch( Exception e ){
                 e.printStackTrace();
                 main.showError( "Probleme beim Speichern" );
