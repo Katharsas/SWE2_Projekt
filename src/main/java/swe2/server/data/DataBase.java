@@ -40,11 +40,16 @@ public class DataBase implements DataAccess {
 	private void initDefaultUsers() {
 		String pwHashed = BCrypt.hashpw("root", BCrypt.gensalt());
 		
-		Operator operator = new Operator("operator", pwHashed);
-		saveUser(operator);
-		
-		Deliverer deliverer = new Deliverer("deliverer", pwHashed);
-		saveUser(deliverer);
+		Operator operator = get(Operator.class, "operator");
+		if (operator == null) {
+			operator = new Operator("operator", pwHashed);
+			saveUser(operator);
+		}
+		Deliverer deliverer = get(Deliverer.class, "deliverer");
+		if (deliverer == null) {
+			deliverer = new Deliverer("deliverer", pwHashed);
+			saveUser(deliverer);
+		}
 	}
 	
 	private boolean saveUser(User user) {
