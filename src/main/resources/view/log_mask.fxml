@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swe2.client.controller.LoginController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="swe2.client.controller.LoginController">
   <children>
     <HBox prefHeight="200.0" prefWidth="300.0" snapToPixel="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
@@ -22,8 +22,8 @@
         </VBox>
         <VBox alignment="BASELINE_RIGHT" fillWidth="true" prefHeight="200.0" prefWidth="200.0" spacing="10.0" HBox.hgrow="ALWAYS">
           <children>
-            <TextField fx:id="nameField" prefWidth="200.0" />
-            <TextField fx:id="pwdField" prefWidth="200.0" />
+            <TextField fx:id="nameField" prefWidth="200.0" text="deliverer" />
+            <TextField fx:id="pwdField" prefWidth="200.0" text="root" />
             <Button fx:id="loginButton" alignment="CENTER" mnemonicParsing="false" onAction="#login" text="Anmelden" />
           </children>
           <padding>
