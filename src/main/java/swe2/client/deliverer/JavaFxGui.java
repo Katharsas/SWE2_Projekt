@@ -24,7 +24,7 @@ import swe2.shared.model.User;
  * @author akraft
  */
 
-public class Main extends Application{
+public class JavaFxGui extends Application{
 
     private Stage primaryStage;
     private AnchorPane root;
@@ -40,7 +40,7 @@ public class Main extends Application{
         FXMLLoader loader = null;
                 
         try{
-            loader = new FXMLLoader( Main.class.getResource( "/view/delivery_mask.fxml" ) );
+            loader = new FXMLLoader( JavaFxGui.class.getResource( "/view/delivery_mask.fxml" ) );
             root = (AnchorPane) loader.load();
             this.primaryStage.setScene( new Scene( root ) );
             this.primaryStage.show();
@@ -62,7 +62,7 @@ public class Main extends Application{
         LoginController ctrl;
         
         try{
-            loader = new FXMLLoader( Main.class.getResource( "/view/log_mask.fxml" ) );
+            loader = new FXMLLoader( JavaFxGui.class.getResource( "/view/log_mask.fxml" ) );
             loginWindow = loader.load();
             loginStage = new Stage(); //Muss initialisiert werden
             

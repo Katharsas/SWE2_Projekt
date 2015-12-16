@@ -5,7 +5,6 @@
  */
 package swe2.client.controller;
 
-import java.util.regex.Pattern;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,7 +12,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import swe2.client.ClientConnection;
-import swe2.client.deliverer.Main;
+import swe2.client.deliverer.JavaFxGui;
 import swe2.shared.model.Deliverer;
 import swe2.shared.model.Delivery;
 import swe2.shared.model.UniformWaste;
@@ -28,8 +27,8 @@ import swe2.shared.model.WasteType;
 public class DelivererController {
     
     private Stage delivererStage;
-    private Main main;
     private Deliverer loggedInUser;
+    private JavaFxGui main;
     private ClientConnection client;
     
     @FXML
@@ -114,7 +113,7 @@ public class DelivererController {
             return WasteType.RESIDUAL;
     }
     
-    public void setMain( Main main ){
+    public void setMain( JavaFxGui main ){
         this.main = main;
     }
     

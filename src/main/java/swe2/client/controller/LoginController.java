@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import swe2.client.ClientConnection;
-import swe2.client.deliverer.Main;
+import swe2.client.deliverer.JavaFxGui;
 import swe2.shared.model.Deliverer;
 import swe2.shared.model.User;
 import swe2.shared.net.Credentials;
@@ -21,7 +21,7 @@ import swe2.shared.net.Credentials;
  */
 public class LoginController {
     
-    private Main main;
+    private JavaFxGui main;
     
     private Stage loginStage;
     private String name;
@@ -79,7 +79,7 @@ public class LoginController {
         this.loginStage = loginStage;
     }
     
-    public void setMain( Main main ){
+    public void setMain( JavaFxGui main ){
         this.main = main;
     }
     

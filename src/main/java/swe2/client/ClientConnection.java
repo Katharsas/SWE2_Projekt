@@ -29,11 +29,9 @@ public class ClientConnection implements Closeable {
 	}
 
 	public ClientConnection( String serverName, int serverPort ){
-	
 		this.serverIp = serverName;
 		this.serverPort = serverPort;
-	
-	}//Constructor------------------------
+	}
 	
 	public void connect() throws IOException {
 		socket = new Socket( serverIp, serverPort );
@@ -42,9 +40,7 @@ public class ClientConnection implements Closeable {
 		writer = new ObjectOutputStream( socket.getOutputStream() );
 		reader = new ObjectInputStream( socket.getInputStream() );
 		logger.info("Streams created & connected");
-		//writer.writeObject( "Test" );
-		
-	}//connect
+	}
 	
 	@Override
 	public void close() throws IOException {
@@ -55,51 +51,48 @@ public class ClientConnection implements Closeable {
         * MAIN METHODS
         * ---------------------------------------*/
         
-        public Serializable getCombustions() throws Exception{
-            
-           writer.writeObject( new DataPackage( RequestType.GET_COMBUSTION, "Need Combustion" ) );
-           DataPackage returnedData = (DataPackage) reader.readObject();
-           return returnedData.getData();	
-	}
-        
-        public Serializable getDeliveries() throws Exception{
-            
-           writer.writeObject( new DataPackage( RequestType.GET_DELIVERY, "Need Delivery" ) );
-           DataPackage returnedData = (DataPackage) reader.readObject();
-           return returnedData.getData();	
-	}
-        
-        public Serializable getWasteStorage() throws Exception{
-            
-           writer.writeObject( new DataPackage( RequestType.GET_WASTESTORAGE, "Need WasteStorage" ) );
-           DataPackage returnedData = (DataPackage) reader.readObject();
-           return returnedData.getData();	
-	}
-        
-	public Serializable getAccess( Serializable data ) throws Exception{
-           writer.writeObject( new DataPackage( RequestType.VALIDATION, data ) );
-           DataPackage returnedData = (DataPackage) reader.readObject();
-           if(  returnedData.getRequestType() == RequestType.GRANTED )
-               return returnedData.getData();
-           else
-               System.out.println( returnedData.getData() );
-               return null;	
-	}
-        
-	public String saveCombustion( Serializable data ) throws Exception{
-            
-           writer.writeObject( new DataPackage( RequestType.PUT_COMBUSTION, data ) );
-           DataPackage returnedData = (DataPackage) reader.readObject();
-           return (String) returnedData.getData();	
-	}
-        
-        public String saveDelivery( Serializable data ) throws Exception{
-            
-           writer.writeObject( new DataPackage( RequestType.PUT_DELIVERY, data ) );
-           DataPackage returnedData = (DataPackage) reader.readObject();
-           return (String) returnedData.getData();	
-	}
-        
+	public Serializable getCombustions() throws Exception {
 
+		writer.writeObject(new DataPackage(RequestType.GET_COMBUSTION, "Need Combustion"));
+		final DataPackage returnedData = (DataPackage) reader.readObject();
+		return returnedData.getData();
+	}
 
+	public Serializable getDeliveries() throws Exception {
+
+		writer.writeObject(new DataPackage(RequestType.GET_DELIVERY, "Need Delivery"));
+		final DataPackage returnedData = (DataPackage) reader.readObject();
+		return returnedData.getData();
+	}
+
+	public Serializable getWasteStorage() throws Exception {
+
+		writer.writeObject(new DataPackage(RequestType.GET_WASTESTORAGE, "Need WasteStorage"));
+		final DataPackage returnedData = (DataPackage) reader.readObject();
+		return returnedData.getData();
+	}
+
+	public Serializable getAccess(Serializable data) throws Exception {
+		writer.writeObject(new DataPackage(RequestType.VALIDATION, data));
+		final DataPackage returnedData = (DataPackage) reader.readObject();
+		if (returnedData.getRequestType() == RequestType.GRANTED)
+			return returnedData.getData();
+		else
+			System.out.println(returnedData.getData());
+		return null;
+	}
+
+	public String saveCombustion(Serializable data) throws Exception {
+
+		writer.writeObject(new DataPackage(RequestType.PUT_COMBUSTION, data));
+		final DataPackage returnedData = (DataPackage) reader.readObject();
+		return (String) returnedData.getData();
+	}
+
+	public String saveDelivery(Serializable data) throws Exception {
+
+		writer.writeObject(new DataPackage(RequestType.PUT_DELIVERY, data));
+		final DataPackage returnedData = (DataPackage) reader.readObject();
+		return (String) returnedData.getData();
+	}
 }//class
