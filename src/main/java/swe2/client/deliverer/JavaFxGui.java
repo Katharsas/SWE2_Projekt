@@ -17,11 +17,16 @@ import javafx.stage.Stage;
 import swe2.client.controller.DelivererController;
 import swe2.client.controller.LoginController;
 import swe2.shared.model.Deliverer;
+import swe2.client.controller.OperatorController;
+import swe2.client.controller.LoginControllerOperator;
+import swe2.shared.model.Operator;
 import swe2.shared.model.User;
 
 /**
  *
  * @author akraft
+ * @author pmarek
+ * 
  */
 
 public class JavaFxGui extends Application{
@@ -30,7 +35,6 @@ public class JavaFxGui extends Application{
     private AnchorPane root;
     private User loggedInUser;
     DelivererController ctrl;
-    
     
     @Override
     public void start( Stage primaryStage ){
@@ -47,7 +51,7 @@ public class JavaFxGui extends Application{
         }catch( Exception e ){ e.printStackTrace(); }
         
         ctrl = loader.getController();
-        ctrl.setDelivererStage( this.primaryStage );
+        ctrl.setStage( this.primaryStage );
         ctrl.setMain( this );
         
         showLoginMask( this.primaryStage );
@@ -94,6 +98,10 @@ public class JavaFxGui extends Application{
     
     public void showError( String errorText ){
         new Alert( Alert.AlertType.WARNING, errorText, ButtonType.OK ).showAndWait();
+    }
+	
+	public void showInfo( String infoText ){
+        new Alert( Alert.AlertType.INFORMATION, infoText, ButtonType.OK ).showAndWait();
     }
     
     public static void main( String[] args){

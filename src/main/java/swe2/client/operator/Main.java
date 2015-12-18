@@ -35,12 +35,12 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 
 		this.primaryStage = primaryStage;
-		this.primaryStage.setTitle("Müllverbrenner 2000 Express");
+		this.primaryStage.setTitle("Muellverbrenner 2000 Express");
 		FXMLLoader loader = null;
 
 		try {
 			loader = new FXMLLoader(
-					Main.class.getResource("/view/operator_mask.fxml"));
+						Main.class.getResource("/view/operator_mask.fxml"));
 			root = (AnchorPane) loader.load();
 			this.primaryStage.setScene(new Scene(root));
 			this.primaryStage.show();

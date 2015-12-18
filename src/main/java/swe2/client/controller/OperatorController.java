@@ -17,7 +17,7 @@ import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import swe2.client.ClientConnection;
-import swe2.client.deliverer.Main;
+import swe2.client.deliverer.JavaFxGui;
 import swe2.shared.model.User;
 
 /**

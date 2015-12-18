@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import swe2.client.ClientConnection;
-import swe2.client.deliverer.Main;
+import swe2.client.deliverer.JavaFxGui;
 import swe2.shared.model.Operator;
 import swe2.shared.model.User;
 import swe2.shared.net.Credentials;

@@ -26,7 +26,7 @@ import swe2.shared.model.WasteType;
  */
 public class DelivererController {
     
-    private Stage delivererStage;
+    private Stage stage;
     private Deliverer loggedInUser;
     private JavaFxGui main;
     private ClientConnection client;
@@ -95,7 +95,7 @@ public class DelivererController {
                         )
                 );
                 client.close();
-				main.showError( "Speichern erfolgreich" );
+				main.showInfo( "Speichern erfolgreich" );
 				System.exit(0);
             }catch( Exception e ){
                 e.printStackTrace();
@@ -127,8 +127,8 @@ public class DelivererController {
         idField.setText( loggedInUser.getId() );
     }
     
-    public void setDelivererStage( Stage deliverereStage ){
-        this.delivererStage = deliverereStage;
+    public void setStage( Stage stage ){
+        this.stage = stage;
     }
     
 }
