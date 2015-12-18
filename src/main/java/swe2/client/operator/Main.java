@@ -5,7 +5,7 @@
  */
 package swe2.client.operator;
 
-import javafx.application.Application;
+/*import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -18,13 +18,14 @@ import swe2.client.controller.OperatorController;
 import swe2.client.controller.LoginControllerOperator;
 import swe2.shared.model.Operator;
 import swe2.shared.model.User;
+*/
 
 /**
  *
  * @author pmarek
  */
 
-public class Main extends Application {
+/*public class Main extends Application {
 
 	private Stage primaryStage;
 	private AnchorPane root;
@@ -40,7 +41,7 @@ public class Main extends Application {
 
 		try {
 			loader = new FXMLLoader(
-						Main.class.getResource("/view/operator_mask.fxml"));
+					Main.class.getResource("/view/operator_mask.fxml"));
 			root = (AnchorPane) loader.load();
 			this.primaryStage.setScene(new Scene(root));
 			this.primaryStage.show();
@@ -49,8 +50,8 @@ public class Main extends Application {
 		}
 
 		ctrl = loader.getController();
-		ctrl.setOperatorStage(this.primaryStage);
-		ctrl.setMain(this);
+		//ctrl.setOperatorStage(this.primaryStage);
+		//ctrl.setMain(this);
 
 		showLoginMask(this.primaryStage);
 
@@ -121,4 +122,4 @@ public class Main extends Application {
 		this.loggedInUser = user;
 	}
 
-}
+}*/

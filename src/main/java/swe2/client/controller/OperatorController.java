@@ -17,18 +17,15 @@ import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import swe2.client.ClientConnection;
-import swe2.client.deliverer.JavaFxGui;
+import swe2.JavaFxGui;
 import swe2.shared.model.User;
 
 /**
  * Controller for the menumask of the operator
  * @author pmarek
  */
-public class OperatorController {
+public class OperatorController extends Controller {
 
-	private Stage operatorStage;
-	private swe2.client.operator.Main main;
-	private User loggedInUser;
 	private ClientConnection client;
 	private ObservableList<String> options = FXCollections.observableArrayList(
 				"View Delivery Reports",
@@ -40,7 +37,7 @@ public class OperatorController {
 			
 
 	@FXML
-	TextField idField, amountField;
+	TextField amountField;
 	@FXML
 	ComboBox<String> cBoxTask;
 	@FXML
@@ -52,19 +49,6 @@ public class OperatorController {
 	@FXML
 	public void initialize() {
 		cBoxTask.setItems(options);
-	}
-
-	public void setMain(swe2.client.operator.Main main) {
-		this.main = main;
-	}
-
-	public void setLoggedInUser(User user) {
-		this.loggedInUser = user;
-		idField.setText(loggedInUser.getId());
-	}
-
-	public void setOperatorStage(Stage operatorStage) {
-		this.operatorStage = operatorStage;
 	}
 
 }

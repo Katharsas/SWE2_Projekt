@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swe2.client.deliverer;
+package swe2;
 
+import java.util.List;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
@@ -14,11 +15,11 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import swe2.client.controller.Controller;
 import swe2.client.controller.DelivererController;
 import swe2.client.controller.LoginController;
-import swe2.shared.model.Deliverer;
 import swe2.client.controller.OperatorController;
-import swe2.client.controller.LoginControllerOperator;
+import swe2.shared.model.Deliverer;
 import swe2.shared.model.Operator;
 import swe2.shared.model.User;
 
@@ -33,18 +34,35 @@ public class JavaFxGui extends Application{
 
     private Stage primaryStage;
     private AnchorPane root;
+	private Class<? extends User> userType;
     private User loggedInUser;
-    DelivererController ctrl;
+    Controller ctrl;
     
     @Override
     public void start( Stage primaryStage ){
-
+		
+		//Uebergebene Parameter aus launch(args) bzw. static void main(String args)
+		List<String> args = this.getParameters().getRaw();
+		String title = args.get(0);
+		String pathToGuiMask = args.get(1);
+		
+		//Setting the userType
+		if( args.get(2).equals("Deliverer") ) {
+			userType = Deliverer.class;
+		}
+		else if( args.get(2).equals("Operator") ) {
+			userType = Operator.class;
+		}
+		else {
+			userType = null;
+		}
+		
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle( "Müllverbrenner 2000 Express" );
+        this.primaryStage.setTitle( title );
         FXMLLoader loader = null;
                 
         try{
-            loader = new FXMLLoader( JavaFxGui.class.getResource( "/view/delivery_mask.fxml" ) );
+            loader = new FXMLLoader( JavaFxGui.class.getResource( pathToGuiMask ) );
             root = (AnchorPane) loader.load();
             this.primaryStage.setScene( new Scene( root ) );
             this.primaryStage.show();
@@ -85,7 +103,7 @@ public class JavaFxGui extends Application{
             ctrl = loader.getController();
             ctrl.setLoginStage( loginStage );
             ctrl.setMain(this);
-            ctrl.setType( Deliverer.class );
+            ctrl.setType( userType );
             
             loginStage.showAndWait();
             //Nur nach erfolgreicher Anmeldung wird hier weitergemacht

@@ -22,8 +22,8 @@
         </VBox>
         <VBox alignment="BASELINE_RIGHT" fillWidth="true" prefHeight="200.0" prefWidth="200.0" spacing="10.0" HBox.hgrow="ALWAYS">
           <children>
-            <TextField fx:id="nameField" prefWidth="200.0" text="deliverer" />
-            <TextField fx:id="pwdField" prefWidth="200.0" text="root" />
+            <TextField fx:id="nameField" prefWidth="200.0" text="deliverer operator" />
+            <PasswordField fx:id="pwdField" text="root" />
             <Button fx:id="loginButton" alignment="CENTER" mnemonicParsing="false" onAction="#login" text="Anmelden" />
           </children>
           <padding>

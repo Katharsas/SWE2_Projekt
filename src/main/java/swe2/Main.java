@@ -10,10 +10,10 @@ public class Main {
 				() -> swe2.server.net.Server.main(new String[]{})
 			).start();
 		new Thread(														//Name, Pfad zur GUI, BenutzerTyp
-				() -> swe2.client.deliverer.JavaFxGui.main(new String[]{"Müllverbrenner 2000 Xpress", delivery_mask, "Deliverer"})
+				() -> swe2.JavaFxGui.main(new String[]{"Müllabgeber 2000 Xpress", delivery_mask, "Deliverer"})
 			).start();
 		/*new Thread(
-				() -> swe2.client.operator.Main.main(new String[]{})
+				() -> swe2.JavaFxGui.main(new String[]{"Müllverbrenner 2000 Express", operator_mask, "Operator"})
 			).start();*/
 	}
 }
