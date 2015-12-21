@@ -21,7 +21,7 @@ import swe2.shared.model.WasteAmount;
 import swe2.shared.model.WasteType;
 
 /**
- *
+ * Controller for the menumask of the deliverer
  * @author akraft
  */
 public class DelivererController extends Controller {
