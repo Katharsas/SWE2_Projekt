@@ -84,9 +84,6 @@ public class ServerConnection implements Runnable {
 			break;
 		case PUT_DELIVERY:
 			if (data.addDelivery((Delivery) inbox.getData())) {
-				for( Delivery d : data.getDeliveries() ) {
-					System.out.println(d);
-				}
 				sendBack(new DataPackage(RequestType.SUCCESS, "Deliverybericht wurde gespeichert"));
 			}
 			else
