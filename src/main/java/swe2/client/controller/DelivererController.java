@@ -10,13 +10,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import swe2.client.ClientConnection;
-import swe2.JavaFxGui;
+import swe2.client.net.ClientConnection;
 import swe2.shared.model.Deliverer;
 import swe2.shared.model.Delivery;
 import swe2.shared.model.UniformWaste;
-import swe2.shared.model.User;
 import swe2.shared.model.WasteAmount;
 import swe2.shared.model.WasteType;
 

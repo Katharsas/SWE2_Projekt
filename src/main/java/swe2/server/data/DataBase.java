@@ -12,7 +12,7 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import swe2.EntityManagerUtil;
+import swe2.server.data.EntityManagerUtil;
 import swe2.shared.model.Combustion;
 import swe2.shared.model.Deliverer;
 import swe2.shared.model.Delivery;

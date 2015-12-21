@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swe2;
+package swe2.client;
 
 import java.util.List;
 import javafx.application.Application;

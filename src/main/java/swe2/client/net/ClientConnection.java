@@ -1,4 +1,4 @@
-package swe2.client;
+package swe2.client.net;
 import java.io.Closeable;
 import java.io.IOException;
 import java.io.ObjectInputStream;

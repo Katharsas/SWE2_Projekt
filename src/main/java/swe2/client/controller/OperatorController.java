@@ -7,18 +7,11 @@ package swe2.client.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import swe2.client.ClientConnection;
-import swe2.JavaFxGui;
-import swe2.shared.model.User;
+import swe2.client.net.ClientConnection;
 
 /**
  * Controller for the menumask of the operator

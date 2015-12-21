@@ -1,4 +1,4 @@
-package swe2;
+package swe2.server.data;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
