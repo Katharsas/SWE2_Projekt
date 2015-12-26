@@ -5,7 +5,7 @@
  */
 package swe2.client.operator;
 
-/*import javafx.application.Application;
+import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -18,14 +18,13 @@ import swe2.client.controller.OperatorController;
 import swe2.client.controller.LoginControllerOperator;
 import swe2.shared.model.Operator;
 import swe2.shared.model.User;
-*/
 
 /**
  *
  * @author pmarek
  */
 
-/*public class Main extends Application {
+public class Main extends Application {
 
 	private Stage primaryStage;
 	private AnchorPane root;
@@ -36,7 +35,7 @@ import swe2.shared.model.User;
 	public void start(Stage primaryStage) {
 
 		this.primaryStage = primaryStage;
-		this.primaryStage.setTitle("Muellverbrenner 2000 Express");
+		this.primaryStage.setTitle("Müllverbrenner 2000 Express");
 		FXMLLoader loader = null;
 
 		try {
@@ -50,8 +49,8 @@ import swe2.shared.model.User;
 		}
 
 		ctrl = loader.getController();
-		//ctrl.setOperatorStage(this.primaryStage);
-		//ctrl.setMain(this);
+		ctrl.setOperatorStage(this.primaryStage);
+		ctrl.setMain(this);
 
 		showLoginMask(this.primaryStage);
 
@@ -81,7 +80,7 @@ import swe2.shared.model.User;
 
 			});
 			loginStage.setTitle("Anmeldung");
-
+			
 			ctrl = loader.getController();
 			ctrl.setLoginStage(loginStage);
 			ctrl.setMain(this);
@@ -122,4 +121,4 @@ import swe2.shared.model.User;
 		this.loggedInUser = user;
 	}
 
-}*/
+}
