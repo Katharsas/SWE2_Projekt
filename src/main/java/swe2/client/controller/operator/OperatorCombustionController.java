@@ -10,7 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import swe2.client.ClientConnection;
 
-public class OperatorDeliveryController extends OperatorTaskController implements Initializable {
+public class OperatorCombustionController extends OperatorTaskController implements Initializable {
 	@FXML
 	ListView listViewDelivery;
 	@Override
@@ -19,7 +19,7 @@ public class OperatorDeliveryController extends OperatorTaskController implement
 		try {
 			client = new ClientConnection();
 			client.connect();
-			list = FXCollections.observableArrayList(client.getDeliveries());
+			list = FXCollections.observableArrayList(client.getCombustions());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
