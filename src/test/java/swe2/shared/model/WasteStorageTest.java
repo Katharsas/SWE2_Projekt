@@ -11,7 +11,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import swe2.EntityManagerUtil;
+import swe2.server.data.EntityManagerUtil;
+
 
 public class WasteStorageTest {
 	

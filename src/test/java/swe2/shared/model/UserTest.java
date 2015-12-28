@@ -4,12 +4,11 @@ import javax.persistence.EntityManager;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.Assert;
 
-import swe2.EntityManagerUtil;
-import swe2.shared.model.Operator;
+import swe2.server.data.EntityManagerUtil;
 
 public class UserTest {
 

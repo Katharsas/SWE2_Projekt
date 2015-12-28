@@ -11,9 +11,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import swe2.EntityManagerUtil;
 import swe2.server.data.DataAccess;
 import swe2.server.data.DataBase;
+import swe2.server.data.EntityManagerUtil;
 
 public class DeliveryTest {
 	
