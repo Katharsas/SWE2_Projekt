@@ -22,7 +22,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import swe2.client.ClientConnection;
 import swe2.client.controller.operator.OperatorDeliveryController;
-import swe2.client.controller.operator.OperatorTaskController;
 import swe2.client.deliverer.Main;
 import swe2.shared.model.Operator;
 import swe2.shared.model.User;
@@ -74,7 +73,7 @@ public class OperatorController {
 	public void submit() {
 		Stage operatorDeliveryStage;
 		AnchorPane operatorDelivery;
-		OperatorTaskController ctrl;
+		OperatorDeliveryController ctrl;
 		FXMLLoader loader;
 		try {
 			loader = getNextStage(cBoxTask.getSelectionModel()
@@ -97,7 +96,7 @@ public class OperatorController {
 
 			ctrl = loader.getController();
 			ctrl.setOperatorTaskStage(operatorDeliveryStage);
-			operatorDeliveryStage.setTitle(cBoxTask.getSelectionModel().getSelectedItem());
+			operatorDeliveryStage.setTitle("View Delivery Reports");
 
 			operatorDeliveryStage.showAndWait();
 		} catch (Exception e) {
@@ -117,19 +116,13 @@ public class OperatorController {
 			break;
 		case "View Waste Storage":
 			loader = new FXMLLoader(
-					Main.class.getResource("/view/operator_view_waste_storage.fxml"));
+					Main.class.getResource("/view/mssg_win.fxml"));
 			break;
 		case "Create Combustion":
-			loader = new FXMLLoader(
-					Main.class.getResource("/view/mssg_win.fxml"));
 			break;
 		case "End Combustion":
-			loader = new FXMLLoader(
-					Main.class.getResource("/view/mssg_win.fxml"));
 			break;
 		case "View Combustion Reports":
-			loader = new FXMLLoader(
-					Main.class.getResource("/view/operator_view_combustion_reports.fxml"));
 			break;
 		default:
 			new FXMLLoader(
