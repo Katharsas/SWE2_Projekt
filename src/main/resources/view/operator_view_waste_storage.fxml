@@ -12,45 +12,14 @@
 	minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0"
 	prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="swe2.client.controller.operator.OperatorWasteController">
-	<children>
-		<HBox prefHeight="200.0" prefWidth="301.0"
-			AnchorPane.bottomAnchor="-93.0" AnchorPane.leftAnchor="0.0"
-			AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
-			<children>
-				<VBox alignment="BASELINE_LEFT" prefHeight="201.0" prefWidth="100.0"
-					spacing="15.0">
-					<padding>
-						<Insets left="10.0" top="60.0" />
-					</padding>
-					<children>
-						<ListView fx:id="listViewDelivery" prefHeight="200.0"
-							prefWidth="200.0" />
-					</children>
-				</VBox>
-				<VBox alignment="BASELINE_RIGHT" minWidth="201.0" prefHeight="200.0"
-					prefWidth="201.0" spacing="10.0">
-					<children>
-						<HBox id="HBox" alignment="CENTER_RIGHT" spacing="5.0">
-							<children>
-								<Label fx:id="typeLabel" text="">
-									<HBox.margin>
-										<Insets right="10.0" />
-									</HBox.margin>
-								</Label>
-							</children>
-						</HBox>
-						<Button fx:id="backButton" mnemonicParsing="false"
-							onAction="#back" text="Back">
-							<VBox.margin>
-								<Insets fx:id="x1" />
-							</VBox.margin>
-						</Button>
-					</children>
-					<padding>
-						<Insets right="10.0" top="55.0" />
-					</padding>
-				</VBox>
-			</children>
-		</HBox>
-	</children>
+	 <VBox prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <ListView fx:id="listViewWasteStorage" prefHeight="200.0" prefWidth="200.0" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+            						<Button fx:id="backButton" mnemonicParsing="false" onAction="#back" text="Back" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
 </AnchorPane>

@@ -1,6 +1,8 @@
 package swe2.client.controller.operator;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -9,22 +11,41 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import swe2.client.net.ClientConnection;
+import swe2.shared.model.Delivery;
+import swe2.shared.model.WasteStorage;
 
 public class OperatorWasteController extends OperatorTaskController implements
 		Initializable {
 	@FXML
-	ListView listViewDelivery;
+	ListView listViewWasteStorage;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		ObservableList list = null;
+		Collection<WasteStorage> wasteList = null;
+		ObservableList<String> list = FXCollections.observableArrayList();
+
 		try {
 			client = new ClientConnection();
 			client.connect();
-			list = FXCollections.observableArrayList(client.getWasteStorage());
+			wasteList = (Collection<WasteStorage>) client.getWasteStorage();
+			client.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		listViewDelivery.setItems(list);
+		if (wasteList != null) {
+			for (WasteStorage w : wasteList) {
+				list.add(parseWaste(w));
+			}
+		}
+
+		listViewWasteStorage.setItems(list);
+	}
+
+	private String parseWaste(WasteStorage w) {
+		String result = "";
+
+		result += w.getId();
+
+		return result;
 	}
 }
