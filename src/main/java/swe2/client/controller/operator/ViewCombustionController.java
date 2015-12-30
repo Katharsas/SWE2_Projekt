@@ -20,7 +20,7 @@ import swe2.shared.model.Delivery;
 import swe2.shared.model.MixedWaste;
 import swe2.shared.model.Operator;
 
-public class OperatorCombustionController extends OperatorTaskController
+public class ViewCombustionController extends TaskController
 		implements Initializable {
 	@FXML
 	ListView listViewCombustion;

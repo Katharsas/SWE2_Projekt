@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swe2.client.controller.operator.CreateCombustionController">
+   <children>
+   	<VBox prefHeight="200.0" prefWidth="300.0">
+   		<children>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="CO2-Prediction: " />
+                  <TextField fx:id="txtCO2" editable="false" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#startCombustion" text="Start Combustion" />
+               </children>
+            </HBox>
+   			
+   			<HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+   				<children>
+   					<Button fx:id="backButton" mnemonicParsing="false" onAction="#back" text="Back" />
+   				</children>
+   			</HBox>
+   		</children>
+   	</VBox>
+   </children>
+</AnchorPane>

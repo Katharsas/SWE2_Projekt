@@ -9,7 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class OperatorTaskController implements Initializable{
+public class TaskController implements Initializable{
 	protected ClientConnection client;
 	Stage operatorTaskStage;
 	@FXML

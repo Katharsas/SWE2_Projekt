@@ -16,7 +16,7 @@ import swe2.shared.model.Delivery;
 import swe2.shared.model.Money;
 import swe2.shared.model.UniformWaste;
 
-public class OperatorDeliveryController extends OperatorTaskController
+public class ViewDeliveryController extends TaskController
 		implements Initializable {
 	@FXML
 	ListView listViewDelivery;

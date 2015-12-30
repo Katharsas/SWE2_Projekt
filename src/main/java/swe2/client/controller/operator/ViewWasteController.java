@@ -14,7 +14,7 @@ import swe2.client.net.ClientConnection;
 import swe2.shared.model.Delivery;
 import swe2.shared.model.WasteStorage;
 
-public class OperatorWasteController extends OperatorTaskController implements
+public class ViewWasteController extends TaskController implements
 		Initializable {
 	@FXML
 	ListView listViewWasteStorage;
