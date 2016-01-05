@@ -13,12 +13,19 @@ import javafx.scene.control.ListView;
 import swe2.client.net.ClientConnection;
 import swe2.shared.model.Delivery;
 import swe2.shared.model.WasteStorage;
-
+/**
+ * Controller for the wasteoverview window
+ * @author Philipp
+ *
+ */
 public class ViewWasteController extends TaskController implements
 		Initializable {
 	@FXML
 	ListView listViewWasteStorage;
-
+	
+	/**
+	 * Writes all available waste from the storage into the listview
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		Collection<WasteStorage> wasteList = null;
@@ -40,7 +47,12 @@ public class ViewWasteController extends TaskController implements
 
 		listViewWasteStorage.setItems(list);
 	}
-
+	
+	/**
+	 * Parse a wastestorage object into a string
+	 * @param w Wastestorage object
+	 * @return String made of a wastestorage object
+	 */
 	private String parseWaste(WasteStorage w) {
 		String result = "";
 

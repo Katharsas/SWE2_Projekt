@@ -19,7 +19,9 @@ import swe2.shared.model.User;
 public class Controller {
 	
 	protected Stage stage;
-    protected User loggedInUser;
+	//Changed to static because it has to be the same for all instances
+    protected static User loggedInUser;
+    //protected User loggedInUser;
     protected JavaFxGui main;
 	
 	@FXML
@@ -37,6 +39,10 @@ public class Controller {
     
     public void setStage( Stage stage ){
         this.stage = stage;
+    }
+    
+    public User getLoggedInUser(){
+    	return loggedInUser;
     }
 	
 	

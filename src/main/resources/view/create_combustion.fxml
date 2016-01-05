@@ -20,7 +20,12 @@
             </HBox>
             <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#startCombustion" text="Start Combustion" />
+                  <Button mnemonicParsing="false" onAction="#startCombustionClick" text="Start Combustion" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblStatus" visible="false" />
                </children>
             </HBox>
    			

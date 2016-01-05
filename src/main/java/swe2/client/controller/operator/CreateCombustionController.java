@@ -7,22 +7,24 @@ import java.util.ResourceBundle;
 
 import swe2.client.net.ClientConnection;
 import swe2.shared.model.Combustion;
+import swe2.shared.model.Delivery;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
-public class CreateCombustionController extends TaskController {
+public class CreateCombustionController extends CombustionController {
 
 	@FXML
 	TextField txtCO2;
 
 	@FXML
-	public void startCombustion() {
-		try{
+	public void startCombustionClick() {
+		startCombustion();
+		try {
 			client = new ClientConnection();
 			client.connect();
-			
+
 			client.close();
-		} catch(Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -30,24 +32,26 @@ public class CreateCombustionController extends TaskController {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		BigDecimal cost = new BigDecimal(0);
-		try{
+		try {
 			client = new ClientConnection();
 			client.connect();
-			cost = calculateCO2Cost((Collection<Combustion>)client.getCombustions());
+			cost = calculateCO2Cost((Collection<Delivery>) client
+					.getDeliveries());
 			client.close();
-		} catch (Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		txtCO2.setText(cost.toString() + "€");
 	}
-	
-	public BigDecimal calculateCO2Cost(Collection<Combustion> cc){
+
+	public BigDecimal calculateCO2Cost(Collection<Delivery> collectionDelivery) {
 		BigDecimal cost = new BigDecimal(0);
-		
-		for(Combustion c : cc){
-			cost.add(c.getCo2().calculateTaxCost().inEuro());
+		BigDecimal tmpCost;
+		for (Delivery delivery : collectionDelivery) {
+			cost = cost.add(delivery.getCost().inEuro());
+			// cost.add(c.getCo2().calculateTaxCost().inEuro());
 		}
-		
+
 		return cost;
 	}
 }

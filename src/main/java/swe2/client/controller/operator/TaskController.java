@@ -3,13 +3,14 @@ package swe2.client.controller.operator;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import swe2.client.controller.Controller;
 import swe2.client.net.ClientConnection;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class TaskController implements Initializable{
+public class TaskController extends Controller implements Initializable{
 	protected ClientConnection client;
 	Stage operatorTaskStage;
 	@FXML

@@ -20,11 +20,19 @@ import swe2.shared.model.Delivery;
 import swe2.shared.model.MixedWaste;
 import swe2.shared.model.Operator;
 
+/**
+ * Controller for the combustionoverview window
+ * @author Philipp
+ *
+ */
 public class ViewCombustionController extends TaskController
 		implements Initializable {
 	@FXML
 	ListView listViewCombustion;
 
+	/**
+	 * Writes all available combustions from the storage into the listview
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		Collection<Combustion> combustionList = null;
@@ -47,17 +55,12 @@ public class ViewCombustionController extends TaskController
 		listViewCombustion.setItems(list);
 	}
 
+	/**
+	 * Parse a combustion object into a string
+	 * @param w Combustion object
+	 * @return String made of a wastestorage object
+	 */
 	private String parseCombustion(Combustion c) {
-
-		// private Long id;
-		//
-		// private final Co2Amount co2;
-		// @Lob
-		// private final LocalDateTime dateTime;
-		// @ManyToOne
-		// private final Operator operator;
-		// private final MixedWaste waste;
-
 		String result = "";
 		result += c.getDateTime() + " - " + c.getOperator().getId() + ": "
 				+ c.getCo2().calculateTaxCost() + " Euro";
