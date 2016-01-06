@@ -47,8 +47,13 @@ public class Money implements Serializable {
 		return amount.equals(((Money)obj).amount);
 	}
 
-	public BigDecimal inEuro() {
-		return amount;
+	public String inEuro() {
+		return amount.setScale(2, BigDecimal.ROUND_HALF_UP).toString();
+	}
+	
+	public Money add(Money money) {
+		Objects.requireNonNull(money);
+		return new Money(this.amount.add(money.amount));
 	}
 
 	public Money multiply(Money money) {

@@ -1,15 +1,11 @@
 package swe2.client.controller.operator;
 
-import java.math.BigDecimal;
 import java.net.URL;
-import java.util.Collection;
 import java.util.ResourceBundle;
 
-import swe2.client.net.ClientConnection;
-import swe2.shared.model.Combustion;
-import swe2.shared.model.Delivery;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import swe2.shared.model.MixedWaste;
 
 public class CreateCombustionController extends CombustionController {
 
@@ -18,40 +14,19 @@ public class CreateCombustionController extends CombustionController {
 
 	@FXML
 	public void startCombustionClick() {
-		startCombustion();
-		try {
-			client = new ClientConnection();
-			client.connect();
-
-			client.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		MixedWaste toBeCombusted = new MixedWaste();
+		// The user should now be able to select/ add waste to the toBeCombusted
+		// waste from WasteStorage waste, not implemented yet.
+		// Until then, combusted waste will just be empty
+		txtCO2.setText(toBeCombusted.calculateCo2Emission()
+				.calculateTaxCost().inEuro() + "â‚¬");
+		boolean started = startCombustion(toBeCombusted);
+		// If started is false, the combustion could not be started
+		// because there is already one running.
+		// The user should be informed about that, not implemented yet.
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		BigDecimal cost = new BigDecimal(0);
-		try {
-			client = new ClientConnection();
-			client.connect();
-			cost = calculateCO2Cost((Collection<Delivery>) client
-					.getDeliveries());
-			client.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		txtCO2.setText(cost.toString() + "€");
-	}
-
-	public BigDecimal calculateCO2Cost(Collection<Delivery> collectionDelivery) {
-		BigDecimal cost = new BigDecimal(0);
-		BigDecimal tmpCost;
-		for (Delivery delivery : collectionDelivery) {
-			cost = cost.add(delivery.getCost().inEuro());
-			// cost.add(c.getCo2().calculateTaxCost().inEuro());
-		}
-
-		return cost;
 	}
 }

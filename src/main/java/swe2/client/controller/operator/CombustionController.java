@@ -5,30 +5,37 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import swe2.shared.model.MixedWaste;
 
 public class CombustionController extends TaskController{
 	@FXML
 	Label lblStatus;
 	
 	private static boolean combustionFlag = false;
+	private static MixedWaste combusted = null;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		lblStatus.setVisible(false);
 	}
 	
-	public boolean startCombustion(){
-		if(combustionFlag)
-			return false;
-		combustionFlag = true;
-		return true;
+	public boolean startCombustion(MixedWaste toBeCombusted) {
+		if(combustionFlag) return false;
+		else {
+			combustionFlag = true;
+			combusted = toBeCombusted;
+			return true;
+		}
 	}
 	
-	public boolean endCombustion(){
-		if(!combustionFlag)
-			return false;
-		combustionFlag = false;
-		return true;
+	public MixedWaste endCombustion(){
+		if(!combustionFlag) return null;
+		else {
+			combustionFlag = false;
+			MixedWaste oldCombusted = combusted;
+			combusted = null;
+			return oldCombusted;
+		}
 	}
 	
 	public boolean getCombustionState(){

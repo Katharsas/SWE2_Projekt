@@ -1,12 +1,8 @@
 package swe2.client.controller.operator;
 
 import java.net.URL;
-import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.ResourceBundle;
-
-import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,11 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import swe2.client.net.ClientConnection;
-import swe2.shared.model.Co2Amount;
 import swe2.shared.model.Combustion;
-import swe2.shared.model.Delivery;
-import swe2.shared.model.MixedWaste;
-import swe2.shared.model.Operator;
 
 /**
  * Controller for the combustionoverview window
@@ -63,7 +55,7 @@ public class ViewCombustionController extends TaskController
 	private String parseCombustion(Combustion c) {
 		String result = "";
 		result += c.getDateTime() + " - " + c.getOperator().getId() + ": "
-				+ c.getCo2().calculateTaxCost() + " Euro";
+				+ c.getCo2().calculateTaxCost().inEuro() + " Euro";
 
 		return result;
 	}
