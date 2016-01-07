@@ -5,13 +5,19 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.net.Socket;
+import java.util.Collection;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import swe2.shared.model.Combustion;
+import swe2.shared.model.Delivery;
 
 import swe2.shared.net.ConnectionDefaults;
 import swe2.shared.net.DataPackage;
 import swe2.shared.net.RequestType;
+
+import swe2.shared.model.User;
+import swe2.shared.model.WasteStorage;
 
 public class ClientConnection implements Closeable {
 	
@@ -51,37 +57,38 @@ public class ClientConnection implements Closeable {
         * MAIN METHODS
         * ---------------------------------------*/
         
-	public Serializable getCombustions() throws Exception {
+	public Collection<Combustion> getCombustions() throws Exception {
 
 		writer.writeObject(new DataPackage(RequestType.GET_COMBUSTION, "Need Combustion"));
 		final DataPackage returnedData = (DataPackage) reader.readObject();
-		return returnedData.getData();
+		return (Collection<Combustion>) returnedData.getData();
 	}
 
-	public Serializable getDeliveries() throws Exception {
+	public Collection<Delivery> getDeliveries() throws Exception {
 
 		writer.writeObject(new DataPackage(RequestType.GET_DELIVERY, "Need Delivery"));
 		final DataPackage returnedData = (DataPackage) reader.readObject();
-		return returnedData.getData();
+		return (Collection<Delivery>) returnedData.getData();
 	}
 
-	public Serializable getWasteStorage() throws Exception {
+	public WasteStorage getWasteStorage() throws Exception {
 
 		writer.writeObject(new DataPackage(RequestType.GET_WASTESTORAGE, "Need WasteStorage"));
 		final DataPackage returnedData = (DataPackage) reader.readObject();
-		return returnedData.getData();
+		return (WasteStorage) returnedData.getData();
 	}
 
-	public Serializable getAccess(Serializable data) throws Exception {
+	public User getAccess(Serializable data) throws Exception {
 		writer.writeObject(new DataPackage(RequestType.VALIDATION, data));
 		final DataPackage returnedData = (DataPackage) reader.readObject();
 		if (returnedData.getRequestType() == RequestType.GRANTED)
-			return returnedData.getData();
+			return (User) returnedData.getData();
 		else
 			System.out.println(returnedData.getData());
 		return null;
 	}
 
+	//In den Strings ist die Meldung vom Server drin, entweder obs erfolgreich war oder nicht
 	public String saveCombustion(Serializable data) throws Exception {
 
 		writer.writeObject(new DataPackage(RequestType.PUT_COMBUSTION, data));
