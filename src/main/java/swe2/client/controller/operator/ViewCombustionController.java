@@ -33,7 +33,7 @@ public class ViewCombustionController extends TaskController
 		try {
 			client = new ClientConnection();
 			client.connect();
-			combustionList = (Collection<Combustion>) client.getCombustions();
+			combustionList = client.getCombustions();
 			client.close();
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -37,7 +37,7 @@ public class ViewDeliveryController extends TaskController
 		try {
 			client = new ClientConnection();
 			client.connect();
-			deliveryList = (Collection<Delivery>) client.getDeliveries();
+			deliveryList = client.getDeliveries();
 			client.close();
 		} catch (Exception e) {
 			e.printStackTrace();

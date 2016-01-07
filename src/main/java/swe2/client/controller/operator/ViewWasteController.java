@@ -28,18 +28,21 @@ public class ViewWasteController extends TaskController implements
 	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		Collection<WasteStorage> wasteList = null;
+		WasteStorage wasteList = null;
 		ObservableList<String> list = FXCollections.observableArrayList();
 
 		try {
 			client = new ClientConnection();
 			client.connect();
-			wasteList = (Collection<WasteStorage>) client.getWasteStorage();
+			wasteList = client.getWasteStorage();
 			client.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		if (wasteList != null) {
+			/**************************/
+			/* NICHT KOMPILIERFAEHIG! */
+			/************************/
 			for (WasteStorage w : wasteList) {
 				list.add(parseWaste(w));
 			}

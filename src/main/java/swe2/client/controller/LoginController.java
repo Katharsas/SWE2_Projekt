@@ -26,7 +26,7 @@ public class LoginController extends Controller {
     private Stage loginStage;
     private String name;
     private String pwd;
-    private Class<? extends User> type = Deliverer.class;
+    private Class<? extends User> type;
     
     private ClientConnection client;
     
