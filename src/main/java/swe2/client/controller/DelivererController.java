@@ -5,6 +5,7 @@
  */
 package swe2.client.controller;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -90,7 +91,7 @@ public class DelivererController extends Controller {
                 );
                 client.close();
 				main.showInfo( "Speichern erfolgreich" );
-				System.exit(0);
+				Platform.exit();
             }catch( Exception e ){
                 e.printStackTrace();
                 main.showError( "Probleme beim Speichern" );

@@ -9,17 +9,16 @@ import java.util.Set;
 import javax.persistence.ElementCollection;
 import javax.persistence.Embeddable;
 import javax.persistence.EnumType;
-import javax.persistence.Inheritance;
+import javax.persistence.FetchType;
 import javax.persistence.MapKeyEnumerated;
 
 @SuppressWarnings("serial")
 @Embeddable
-@Inheritance
 public class MixedWaste implements Serializable {
 	
 	public static final MixedWaste EMPTY = new MixedWaste();
 	
-	@ElementCollection
+	@ElementCollection(fetch = FetchType.EAGER)
 	@MapKeyEnumerated(EnumType.STRING)
 	private final Map<WasteType, WasteAmount> typeToAmount = new HashMap<>();
 	

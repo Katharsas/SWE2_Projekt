@@ -34,7 +34,10 @@ public class DataBase implements DataAccess {
 		em = EntityManagerUtil.getEntityManagerFactory().createEntityManager();
 		session = em.unwrap(Session.class);
 		initDefaultUsers();
-		save(new WasteStorage());
+		if (getStorage() == null) {
+			logger.warn("Didn't find WasteStorage in DB, created new WasteStorage!");
+			save(new WasteStorage());
+		}
 	}
 	
 	private void initDefaultUsers() {

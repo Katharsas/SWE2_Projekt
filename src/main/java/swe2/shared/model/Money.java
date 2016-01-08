@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 /**
@@ -13,6 +14,7 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Money implements Serializable {
 
+	@Column(name="MoneyAmount")
 	final private BigDecimal amount;
 
 	@Deprecated
