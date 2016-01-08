@@ -13,6 +13,7 @@ import javafx.scene.control.ListView;
 import swe2.client.net.ClientConnection;
 import swe2.shared.model.Delivery;
 import swe2.shared.model.WasteStorage;
+import swe2.shared.model.WasteType;
 /**
  * Controller for the wasteoverview window
  * @author Philipp
@@ -40,14 +41,10 @@ public class ViewWasteController extends TaskController implements
 			e.printStackTrace();
 		}
 		if (wasteList != null) {
-			/**************************/
-			/* NICHT KOMPILIERFAEHIG! */
-			/************************/
-			for (WasteStorage w : wasteList) {
-				list.add(parseWaste(w));
+			for( WasteType t : wasteList.keySet() ){
+				list.add( t.name() + ": " + wasteList.get(t) );
 			}
 		}
-
 		listViewWasteStorage.setItems(list);
 	}
 	
@@ -56,11 +53,13 @@ public class ViewWasteController extends TaskController implements
 	 * @param w Wastestorage object
 	 * @return String made of a wastestorage object
 	 */
-	private String parseWaste(WasteStorage w) {
+	/*private String parseWaste(WasteStorage w) {
 		String result = "";
 
-		result += w.getId();
+		result = "Paper: " + w.get(WasteType.PAPER)
+				+ "Plastic: " + w.get(WasteType.PLASTIC)
+				+ "Residual" + w.get(WasteType.RESIDUAL);
 
 		return result;
-	}
+	}*/
 }

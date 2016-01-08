@@ -72,7 +72,6 @@ public class ClientConnection implements Closeable {
 	}
 
 	public WasteStorage getWasteStorage() throws Exception {
-
 		writer.writeObject(new DataPackage(RequestType.GET_WASTESTORAGE, "Need WasteStorage"));
 		final DataPackage returnedData = (DataPackage) reader.readObject();
 		return (WasteStorage) returnedData.getData();
