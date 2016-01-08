@@ -1,286 +1,299 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg height="963" version="1.1" width="1007" xmlns="http://www.w3.org/2000/svg">
-<rect fill="#ffffff" height="68" stroke="#ffffff" stroke-width="1" width="66" x="594" y="182"/>
-<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="66" x="594" y="182"/>
-<text font-family="Dialog" font-size="12" x="600" y="196">
+<svg height="993" version="1.1" width="1007" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#ffffff" height="68" stroke="#ffffff" stroke-width="1" width="66" x="594" y="203"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="66" x="594" y="203"/>
+<text font-family="Dialog" font-size="12" x="600" y="217">
 + Delivery</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="594" y="206"/>
 <rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="594" y="227"/>
-<rect fill="#ffffff" height="146" stroke="#ffffff" stroke-width="1" width="318" x="103" y="313"/>
-<rect fill="none" height="146" stroke="#000000" stroke-width="1" width="318" x="103" y="313"/>
-<text font-family="Dialog" font-size="12" x="231" y="347">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="594" y="248"/>
+<rect fill="#ffffff" height="146" stroke="#ffffff" stroke-width="1" width="318" x="103" y="334"/>
+<rect fill="none" height="146" stroke="#000000" stroke-width="1" width="318" x="103" y="334"/>
+<text font-family="Dialog" font-size="12" x="231" y="368">
 WasteType</text>
-<text font-family="Dialog" font-size="12" x="213" y="328">
+<text font-family="Dialog" font-size="12" x="213" y="349">
 &lt;&lt;enumeration&gt;&gt;</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="318" x="103" y="357"/>
-<text font-family="Dialog" font-size="12" x="107" y="372">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="318" x="103" y="378"/>
+<text font-family="Dialog" font-size="12" x="107" y="393">
 RESIDUAL</text>
-<text font-family="Dialog" font-size="12" x="107" y="389">
+<text font-family="Dialog" font-size="12" x="107" y="410">
 PLASTIC</text>
-<text font-family="Dialog" font-size="12" x="107" y="406">
+<text font-family="Dialog" font-size="12" x="107" y="427">
 PAPER</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="318" x="103" y="416"/>
-<text font-family="Dialog" font-size="12" x="107" y="431">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="318" x="103" y="437"/>
+<text font-family="Dialog" font-size="12" x="107" y="452">
 +getCo2Emission(amount : WasteAmount) : Co2Amount</text>
-<text font-family="Dialog" font-size="12" x="107" y="448">
+<text font-family="Dialog" font-size="12" x="107" y="469">
 +getDeliveryCost(amount : WasteAmount) : Money</text>
-<polyline fill="none" points="400,223 400,313" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="400,223 405,233 400,243 395,233" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="400,223 405,233 400,243 395,233" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="415" y="273">
+<polyline fill="none" points="400,244 400,334" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="400,244 405,254 400,264 395,254" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="400,244 405,254 400,264 395,254" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="415" y="294">
  </text>
-<text font-family="Dialog" font-size="12" x="411" y="243">
+<text font-family="Dialog" font-size="12" x="411" y="264">
 0..*</text>
-<text font-family="Dialog" font-size="12" x="413" y="304">
+<text font-family="Dialog" font-size="12" x="413" y="325">
 1</text>
-<text font-family="Dialog" font-size="12" x="334" y="304">
+<text font-family="Dialog" font-size="12" x="334" y="325">
 -wasteType</text>
-<rect fill="#ffffff" height="75" stroke="#ffffff" stroke-width="1" width="136" x="38" y="88"/>
-<rect fill="none" height="75" stroke="#000000" stroke-width="1" width="136" x="38" y="88"/>
-<text font-family="Dialog" font-size="12" x="62" y="102">
+<rect fill="#ffffff" height="109" stroke="#ffffff" stroke-width="1" width="258" x="38" y="15"/>
+<rect fill="none" height="109" stroke="#000000" stroke-width="1" width="258" x="38" y="15"/>
+<text font-family="Dialog" font-size="12" x="123" y="29">
 + WasteAmount</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="136" x="38" y="112"/>
-<text font-family="Dialog" font-size="12" x="42" y="127">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="258" x="38" y="39"/>
+<text font-family="Dialog" font-size="12" x="42" y="54">
 -weight : int</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="136" x="38" y="137"/>
-<text font-family="Dialog" font-size="12" x="42" y="152">
--inKilogram() : int</text>
-<polyline fill="none" points="286,158 173,158" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="286,158 276,163 266,158 276,153" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="286,158 276,163 266,158 276,153" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="202" y="152">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="258" x="38" y="64"/>
+<text font-family="Dialog" font-size="12" x="42" y="79">
++inKilogram() : int</text>
+<text font-family="Dialog" font-size="12" x="42" y="96">
++add(WasteAmount : amount) : WasteAmount</text>
+<text font-family="Dialog" font-size="12" x="42" y="113">
++sub(WasteAmount : amount) : WasteAmount</text>
+<polyline fill="none" points="430,174 430,64 295,64" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="430,174 425,164 430,154 435,164" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="430,174 425,164 430,154 435,164" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="393" y="59">
  </text>
-<text font-family="Dialog" font-size="12" x="260" y="153">
+<text font-family="Dialog" font-size="12" x="404" y="153">
 0..*</text>
-<text font-family="Dialog" font-size="12" x="184" y="153">
+<text font-family="Dialog" font-size="12" x="309" y="59">
 1</text>
-<text font-family="Dialog" font-size="12" x="165" y="174">
+<text font-family="Dialog" font-size="12" x="301" y="82">
 -wasteAmount</text>
-<rect fill="#ffffff" height="71" stroke="#ffffff" stroke-width="1" width="185" x="286" y="153"/>
-<rect fill="none" height="71" stroke="#000000" stroke-width="1" width="185" x="286" y="153"/>
-<text font-family="Dialog" font-size="12" x="334" y="167">
+<rect fill="#ffffff" height="71" stroke="#ffffff" stroke-width="1" width="185" x="286" y="174"/>
+<rect fill="none" height="71" stroke="#000000" stroke-width="1" width="185" x="286" y="174"/>
+<text font-family="Dialog" font-size="12" x="334" y="188">
 + UniformWaste</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="185" x="286" y="177"/>
 <rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="185" x="286" y="198"/>
-<text font-family="Dialog" font-size="12" x="290" y="213">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="185" x="286" y="219"/>
+<text font-family="Dialog" font-size="12" x="290" y="234">
 +calculateDeliveryCost() : Money</text>
-<polyline fill="none" points="594,189 470,189" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="594,189 584,194 574,189 584,184" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="594,189 584,194 574,189 584,184" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="500" y="183">
+<polyline fill="none" points="594,232 470,232" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="594,232 584,237 574,232 584,227" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="594,232 584,237 574,232 584,227" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="500" y="226">
  </text>
-<text font-family="Dialog" font-size="12" x="575" y="184">
+<text font-family="Dialog" font-size="12" x="575" y="227">
 1</text>
-<text font-family="Dialog" font-size="12" x="481" y="184">
+<text font-family="Dialog" font-size="12" x="481" y="227">
 1</text>
-<text font-family="Dialog" font-size="12" x="481" y="204">
+<text font-family="Dialog" font-size="12" x="481" y="247">
 -waste</text>
-<polygon fill="#ffffff" points="502,333 564,333 564,357 613,357 613,436 502,436 502,333" stroke="#ffffff" stroke-width="1"/>
-<rect fill="none" height="24" stroke="#000000" stroke-width="1" width="62" x="502" y="333"/>
-<text font-family="Dialog" font-size="12" x="507" y="347">
+<polygon fill="#ffffff" points="502,354 564,354 564,378 613,378 613,457 502,457 502,354" stroke="#ffffff" stroke-width="1"/>
+<rect fill="none" height="24" stroke="#000000" stroke-width="1" width="62" x="502" y="354"/>
+<text font-family="Dialog" font-size="12" x="507" y="368">
 java.time</text>
-<rect fill="none" height="79" stroke="#000000" stroke-width="1" width="111" x="502" y="357"/>
-<rect fill="#ffffff" height="66" stroke="#ffffff" stroke-width="1" width="104" x="507" y="365"/>
-<rect fill="none" height="66" stroke="#000000" stroke-width="1" width="104" x="507" y="365"/>
-<text font-family="Dialog" font-size="12" x="512" y="399">
+<rect fill="none" height="79" stroke="#000000" stroke-width="1" width="111" x="502" y="378"/>
+<rect fill="#ffffff" height="66" stroke="#ffffff" stroke-width="1" width="104" x="507" y="386"/>
+<rect fill="none" height="66" stroke="#000000" stroke-width="1" width="104" x="507" y="386"/>
+<text font-family="Dialog" font-size="12" x="512" y="420">
 + LocalDateTime</text>
-<text font-family="Dialog" font-size="12" x="521" y="380">
+<text font-family="Dialog" font-size="12" x="521" y="401">
 &lt;&lt;interface&gt;&gt;</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="104" x="507" y="409"/>
-<rect fill="#ffffff" height="88" stroke="#ffffff" stroke-width="1" width="147" x="699" y="393"/>
-<rect fill="none" height="88" stroke="#000000" stroke-width="1" width="147" x="699" y="393"/>
-<text font-family="Dialog" font-size="12" font-style="italic" x="754" y="407">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="104" x="507" y="430"/>
+<rect fill="#ffffff" height="88" stroke="#ffffff" stroke-width="1" width="147" x="699" y="414"/>
+<rect fill="none" height="88" stroke="#000000" stroke-width="1" width="147" x="699" y="414"/>
+<text font-family="Dialog" font-size="12" font-style="italic" x="754" y="428">
 + User</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="147" x="699" y="417"/>
-<text font-family="Dialog" font-size="12" x="703" y="432">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="147" x="699" y="438"/>
+<text font-family="Dialog" font-size="12" x="703" y="453">
 -id : String</text>
-<text font-family="Dialog" font-size="12" x="703" y="449">
+<text font-family="Dialog" font-size="12" x="703" y="470">
 -passwordHash : String</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="147" x="699" y="459"/>
-<rect fill="#ffffff" height="71" stroke="#ffffff" stroke-width="1" width="124" x="743" y="258"/>
-<rect fill="none" height="71" stroke="#000000" stroke-width="1" width="124" x="743" y="258"/>
-<text font-family="Dialog" font-size="12" x="775" y="272">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="147" x="699" y="480"/>
+<rect fill="#ffffff" height="71" stroke="#ffffff" stroke-width="1" width="124" x="743" y="279"/>
+<rect fill="none" height="71" stroke="#000000" stroke-width="1" width="124" x="743" y="279"/>
+<text font-family="Dialog" font-size="12" x="775" y="293">
 + Deliverer</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="124" x="743" y="282"/>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="124" x="743" y="305"/>
-<polyline fill="none" points="827,328 827,393" stroke="#000000" stroke-width="1"/>
-<polygon fill="#ffffff" points="827,393 820,381 834,381" stroke="#ffffff" stroke-width="1"/>
-<polygon fill="none" points="827,393 820,381 834,381" stroke="#000000" stroke-width="1"/>
-<rect fill="#ffffff" height="67" stroke="#ffffff" stroke-width="1" width="114" x="752" y="616"/>
-<rect fill="none" height="67" stroke="#000000" stroke-width="1" width="114" x="752" y="616"/>
-<text font-family="Dialog" font-size="12" x="780" y="630">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="124" x="743" y="303"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="124" x="743" y="326"/>
+<polyline fill="none" points="827,349 827,414" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="827,414 820,402 834,402" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="827,414 820,402 834,402" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffffff" height="67" stroke="#ffffff" stroke-width="1" width="114" x="752" y="637"/>
+<rect fill="none" height="67" stroke="#000000" stroke-width="1" width="114" x="752" y="637"/>
+<text font-family="Dialog" font-size="12" x="780" y="651">
 + Operator</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="114" x="752" y="640"/>
 <rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="114" x="752" y="661"/>
-<polyline fill="none" points="826,616 826,480" stroke="#000000" stroke-width="1"/>
-<polygon fill="#ffffff" points="826,480 833,492 819,492" stroke="#ffffff" stroke-width="1"/>
-<polygon fill="none" points="826,480 833,492 819,492" stroke="#000000" stroke-width="1"/>
-<polyline fill="none" points="659,201 842,201 842,258" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="659,201 669,196 679,201 669,206" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="659,201 669,196 679,201 669,206" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="755" y="195">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="114" x="752" y="682"/>
+<polyline fill="none" points="826,637 826,501" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="826,501 833,513 819,513" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="826,501 833,513 819,513" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="659,244 842,244 842,279" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="659,244 669,239 679,244 669,249" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="659,244 669,239 679,244 669,249" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="744" y="238">
  </text>
-<text font-family="Dialog" font-size="12" x="666" y="196">
+<text font-family="Dialog" font-size="12" x="666" y="239">
 0..*</text>
-<text font-family="Dialog" font-size="12" x="856" y="248">
+<text font-family="Dialog" font-size="12" x="856" y="269">
 1</text>
-<text font-family="Dialog" font-size="12" x="787" y="249">
+<text font-family="Dialog" font-size="12" x="787" y="270">
 -deliverer</text>
-<rect fill="#ffffff" height="75" stroke="#ffffff" stroke-width="1" width="208" x="622" y="16"/>
-<rect fill="none" height="75" stroke="#000000" stroke-width="1" width="208" x="622" y="16"/>
-<text font-family="Dialog" font-size="12" x="703" y="30">
+<rect fill="#ffffff" height="109" stroke="#ffffff" stroke-width="1" width="208" x="622" y="14"/>
+<rect fill="none" height="109" stroke="#000000" stroke-width="1" width="208" x="622" y="14"/>
+<text font-family="Dialog" font-size="12" x="703" y="28">
 + Money</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="208" x="622" y="40"/>
-<text font-family="Dialog" font-size="12" x="626" y="55">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="208" x="622" y="38"/>
+<text font-family="Dialog" font-size="12" x="626" y="53">
 -amount : BigDecimal</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="208" x="622" y="65"/>
-<text font-family="Dialog" font-size="12" x="626" y="80">
--inEuros() : BigDecimal</text>
-<polyline fill="none" points="651,182 651,90" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="651,182 646,172 651,162 656,172" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="651,182 646,172 651,162 656,172" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="656" y="140">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="208" x="622" y="63"/>
+<text font-family="Dialog" font-size="12" x="626" y="78">
++inEuro() : BigDecimal</text>
+<text font-family="Dialog" font-size="12" x="626" y="95">
++add(money) : Money</text>
+<text font-family="Dialog" font-size="12" x="626" y="112">
++multiply(Money : money) : Money</text>
+<polyline fill="none" points="651,203 651,122" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="651,203 646,193 651,183 656,193" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="651,203 646,193 651,183 656,193" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="656" y="167">
  cost</text>
-<text font-family="Dialog" font-size="12" x="625" y="165">
+<text font-family="Dialog" font-size="12" x="625" y="186">
 0..*</text>
-<text font-family="Dialog" font-size="12" x="630" y="117">
+<text font-family="Dialog" font-size="12" x="630" y="149">
 1</text>
-<rect fill="#ffffff" height="139" stroke="#ffffff" stroke-width="1" width="353" x="22" y="706"/>
-<rect fill="none" height="139" stroke="#000000" stroke-width="1" width="353" x="22" y="706"/>
-<text font-family="Dialog" font-size="12" x="160" y="720">
+<rect fill="#ffffff" height="139" stroke="#ffffff" stroke-width="1" width="353" x="22" y="727"/>
+<rect fill="none" height="139" stroke="#000000" stroke-width="1" width="353" x="22" y="727"/>
+<text font-family="Dialog" font-size="12" x="160" y="741">
 + MixedWaste</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="353" x="22" y="730"/>
 <rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="353" x="22" y="751"/>
-<text font-family="Dialog" font-size="12" x="26" y="766">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="353" x="22" y="772"/>
+<text font-family="Dialog" font-size="12" x="26" y="787">
 +addWaste(type : WasteType,amount : WasteAmount) : void</text>
-<text font-family="Dialog" font-size="12" x="26" y="783">
+<text font-family="Dialog" font-size="12" x="26" y="804">
 +removeWaste(type : WasteType,amount : WasteAmount) : void</text>
-<text font-family="Dialog" font-size="12" x="26" y="800">
+<text font-family="Dialog" font-size="12" x="26" y="821">
 +get(type : WasteType) : WasteAmount</text>
-<text font-family="Dialog" font-size="12" x="26" y="817">
+<text font-family="Dialog" font-size="12" x="26" y="838">
 +keySet() : Set&lt;WasteType&gt;</text>
-<text font-family="Dialog" font-size="12" x="26" y="834">
+<text font-family="Dialog" font-size="12" x="26" y="855">
 +calculateCo2Emission() : Co2Amount</text>
-<rect fill="#ffffff" height="72" stroke="#ffffff" stroke-width="1" width="176" x="470" y="657"/>
-<rect fill="none" height="72" stroke="#000000" stroke-width="1" width="176" x="470" y="657"/>
-<text font-family="Dialog" font-size="12" x="519" y="671">
+<rect fill="#ffffff" height="72" stroke="#ffffff" stroke-width="1" width="176" x="470" y="678"/>
+<rect fill="none" height="72" stroke="#000000" stroke-width="1" width="176" x="470" y="678"/>
+<text font-family="Dialog" font-size="12" x="519" y="692">
 + Combustion</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="176" x="470" y="681"/>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="176" x="470" y="704"/>
-<polyline fill="none" points="470,710 374,710" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="470,710 460,715 450,710 460,705" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="470,710 460,715 450,710 460,705" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="306" y="715">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="176" x="470" y="702"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="176" x="470" y="725"/>
+<polyline fill="none" points="470,742 374,742" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="470,742 460,747 450,742 460,737" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="470,742 460,747 450,742 460,737" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="306" y="747">
  </text>
-<text font-family="Dialog" font-size="12" x="445" y="705">
+<text font-family="Dialog" font-size="12" x="445" y="737">
 0..*</text>
-<text font-family="Dialog" font-size="12" x="388" y="705">
+<text font-family="Dialog" font-size="12" x="388" y="737">
 1</text>
-<text font-family="Dialog" font-size="12" x="382" y="728">
+<text font-family="Dialog" font-size="12" x="382" y="760">
 -waste</text>
-<rect fill="#ffffff" height="68" stroke="#ffffff" stroke-width="1" width="98" x="270" y="881"/>
-<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="98" x="270" y="881"/>
-<text font-family="Dialog" font-size="12" x="275" y="895">
+<rect fill="#ffffff" height="71" stroke="#ffffff" stroke-width="1" width="131" x="270" y="902"/>
+<rect fill="none" height="71" stroke="#000000" stroke-width="1" width="131" x="270" y="902"/>
+<text font-family="Dialog" font-size="12" x="291" y="916">
 + WasteStorage</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="98" x="270" y="905"/>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="98" x="270" y="926"/>
-<polyline fill="none" points="335,881 335,844" stroke="#000000" stroke-width="1"/>
-<polygon fill="#ffffff" points="335,844 342,856 328,856" stroke="#ffffff" stroke-width="1"/>
-<polygon fill="none" points="335,844 342,856 328,856" stroke="#000000" stroke-width="1"/>
-<polyline fill="none" points="645,668 752,668" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="645,668 655,663 665,668 655,673" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="645,668 655,663 665,668 655,673" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="670" y="661">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="131" x="270" y="926"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="131" x="270" y="947"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="274" x2="349" y1="963" y2="963"/>
+<text font-family="Dialog" font-size="12" x="274" y="962">
++getId() : long</text>
+<polyline fill="none" points="335,902 335,865" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="335,865 342,877 328,877" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="335,865 342,877 328,877" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="645,699 752,699" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="645,699 655,694 665,699 655,704" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="645,699 655,694 665,699 655,704" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="670" y="692">
  </text>
-<text font-family="Dialog" font-size="12" x="651" y="663">
+<text font-family="Dialog" font-size="12" x="651" y="694">
 0..*</text>
-<text font-family="Dialog" font-size="12" x="730" y="663">
+<text font-family="Dialog" font-size="12" x="730" y="694">
 1</text>
-<text font-family="Dialog" font-size="12" x="698" y="684">
+<text font-family="Dialog" font-size="12" x="698" y="715">
 -operator</text>
-<polygon fill="#ffffff" points="22,529 108,529 108,553 157,553 157,632 22,632 22,529" stroke="#ffffff" stroke-width="1"/>
-<rect fill="none" height="24" stroke="#000000" stroke-width="1" width="86" x="22" y="529"/>
-<text font-family="Dialog" font-size="12" x="27" y="543">
+<polygon fill="#ffffff" points="22,550 108,550 108,574 157,574 157,653 22,653 22,550" stroke="#ffffff" stroke-width="1"/>
+<rect fill="none" height="24" stroke="#000000" stroke-width="1" width="86" x="22" y="550"/>
+<text font-family="Dialog" font-size="12" x="27" y="564">
 java.util</text>
-<rect fill="none" height="79" stroke="#000000" stroke-width="1" width="135" x="22" y="553"/>
-<rect fill="#ffffff" height="66" stroke="#ffffff" stroke-width="1" width="123" x="27" y="559"/>
-<rect fill="none" height="66" stroke="#000000" stroke-width="1" width="123" x="27" y="559"/>
-<text font-family="Dialog" font-size="12" x="48" y="593">
+<rect fill="none" height="79" stroke="#000000" stroke-width="1" width="135" x="22" y="574"/>
+<rect fill="#ffffff" height="66" stroke="#ffffff" stroke-width="1" width="123" x="27" y="580"/>
+<rect fill="none" height="66" stroke="#000000" stroke-width="1" width="123" x="27" y="580"/>
+<text font-family="Dialog" font-size="12" x="48" y="614">
 + java.util::Map</text>
-<text font-family="Dialog" font-size="12" x="51" y="574">
+<text font-family="Dialog" font-size="12" x="51" y="595">
 &lt;&lt;interface&gt;&gt;</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="123" x="27" y="603"/>
-<polyline fill="none" points="47,559 47,162" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="50" y="364">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="123" x="27" y="624"/>
+<polyline fill="none" points="47,580 47,123" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="50" y="355">
  value</text>
-<polyline fill="none" points="125,559 125,458" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="128" y="514">
+<polyline fill="none" points="125,580 125,479" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="128" y="535">
  key</text>
-<polyline fill="none" points="125,706 125,624" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="125,706 120,696 125,686 130,696" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="125,706 120,696 125,686 130,696" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="141" y="677">
+<polyline fill="none" points="125,727 125,645" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="125,727 120,717 125,707 130,717" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="125,727 120,717 125,707 130,717" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="141" y="698">
  </text>
-<text font-family="Dialog" font-size="12" x="104" y="651">
+<text font-family="Dialog" font-size="12" x="104" y="672">
 1</text>
-<text font-family="Dialog" font-size="12" x="127" y="650">
+<text font-family="Dialog" font-size="12" x="127" y="671">
 -wasteMap</text>
-<polyline fill="none" points="564,657 564,430" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="564,657 559,647 564,637 569,647" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="564,657 559,647 564,637 569,647" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="579" y="548">
+<polyline fill="none" points="564,678 564,451" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="564,678 559,668 564,658 569,668" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="564,678 559,668 564,658 569,668" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="579" y="569">
  </text>
-<text font-family="Dialog" font-size="12" x="538" y="640">
+<text font-family="Dialog" font-size="12" x="538" y="661">
 0..*</text>
-<text font-family="Dialog" font-size="12" x="543" y="457">
+<text font-family="Dialog" font-size="12" x="543" y="478">
 1</text>
-<text font-family="Dialog" font-size="12" x="567" y="457">
+<text font-family="Dialog" font-size="12" x="567" y="478">
 -dateTime</text>
-<rect fill="#ffffff" height="92" stroke="#ffffff" stroke-width="1" width="230" x="606" y="849"/>
-<rect fill="none" height="92" stroke="#000000" stroke-width="1" width="230" x="606" y="849"/>
-<text font-family="Dialog" font-size="12" x="683" y="863">
+<rect fill="#ffffff" height="109" stroke="#ffffff" stroke-width="1" width="234" x="606" y="870"/>
+<rect fill="none" height="109" stroke="#000000" stroke-width="1" width="234" x="606" y="870"/>
+<text font-family="Dialog" font-size="12" x="685" y="884">
 + Co2Amount</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="230" x="606" y="873"/>
-<text font-family="Dialog" font-size="12" x="610" y="888">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="234" x="606" y="894"/>
+<text font-family="Dialog" font-size="12" x="610" y="909">
 -amount : int</text>
-<line fill="#000000" stroke="#000000" stroke-width="1" x1="610" x2="740" y1="906" y2="906"/>
-<text font-family="Dialog" font-size="12" x="610" y="905">
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="610" x2="740" y1="927" y2="927"/>
+<text font-family="Dialog" font-size="12" x="610" y="926">
 -taxCostPerUnit : Money</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="230" x="606" y="915"/>
-<text font-family="Dialog" font-size="12" x="610" y="930">
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="234" x="606" y="936"/>
+<text font-family="Dialog" font-size="12" x="610" y="951">
 +calculateTaxCost() : Money</text>
-<polyline fill="none" points="630,728 630,849" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="630,728 635,738 630,748 625,738" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="630,728 635,738 630,748 625,738" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="655" y="792">
+<text font-family="Dialog" font-size="12" x="610" y="968">
++add(Co2Amount : amount) : Co2Amount</text>
+<polyline fill="none" points="630,749 630,870" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="630,749 635,759 630,769 625,759" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="630,749 635,759 630,769 625,759" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="655" y="813">
  </text>
-<text font-family="Dialog" font-size="12" x="638" y="755">
+<text font-family="Dialog" font-size="12" x="638" y="776">
 0..*</text>
-<text font-family="Dialog" font-size="12" x="646" y="839">
+<text font-family="Dialog" font-size="12" x="646" y="860">
 1</text>
-<text font-family="Dialog" font-size="12" x="599" y="841">
+<text font-family="Dialog" font-size="12" x="599" y="862">
 -co2</text>
-<polyline fill="none" points="645,705 902,705 902,33 829,33" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="645,705 655,700 665,705 655,710" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="645,705 655,700 665,705 655,710" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="917" y="466">
+<polyline fill="none" points="645,741 902,741 902,69 829,69" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="645,741 655,736 665,741 655,746" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="645,741 655,736 665,741 655,746" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="917" y="502">
  </text>
-<text font-family="Dialog" font-size="12" x="652" y="700">
+<text font-family="Dialog" font-size="12" x="652" y="736">
 0..*</text>
-<text font-family="Dialog" font-size="12" x="840" y="28">
+<text font-family="Dialog" font-size="12" x="840" y="64">
 1</text>
-<text font-family="Dialog" font-size="12" x="835" y="49">
--co2Costs</text>
-<polyline fill="none" points="605,249 605,365" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="605,249 610,259 605,269 600,259" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="605,249 610,259 605,269 600,259" stroke="#000000" stroke-width="1"/>
-<text font-family="Dialog" font-size="12" x="621" y="312">
+<text font-family="Dialog" font-size="12" x="835" y="85">
+-co2Cost</text>
+<polyline fill="none" points="605,270 605,386" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="605,270 610,280 605,290 600,280" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="605,270 610,280 605,290 600,280" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="621" y="333">
  </text>
-<text font-family="Dialog" font-size="12" x="613" y="277">
+<text font-family="Dialog" font-size="12" x="613" y="298">
 0..*</text>
-<text font-family="Dialog" font-size="12" x="584" y="348">
+<text font-family="Dialog" font-size="12" x="584" y="369">
 1</text>
-<text font-family="Dialog" font-size="12" x="608" y="347">
+<text font-family="Dialog" font-size="12" x="608" y="368">
 -dateTime</text>
 </svg>

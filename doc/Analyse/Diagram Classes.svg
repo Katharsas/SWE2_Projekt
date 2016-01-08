@@ -198,5 +198,5 @@ co2</text>
 <polygon fill="#000000" points="555,481 565,476 575,481 565,486" stroke="#000000" stroke-width="1"/>
 <polygon fill="none" points="555,481 565,476 575,481 565,486" stroke="#000000" stroke-width="1"/>
 <text font-family="Dialog" font-size="12" x="784" y="361">
-co2Costs</text>
+co2Cost</text>
 </svg>

@@ -37,6 +37,7 @@ public class Combustion implements Serializable {
 	@ManyToOne
 	private final Operator operator;
 	private final MixedWaste waste;
+	private final Money co2Cost;
 	
 	public Combustion(MixedWaste waste, Operator operator) {
 		Objects.requireNonNull(waste);
@@ -44,6 +45,7 @@ public class Combustion implements Serializable {
 		this.waste = waste;
 		this.operator = operator;
 		this.co2 = waste.calculateCo2Emission();
+		this.co2Cost = co2.calculateTaxCost();
 		this.dateTime = LocalDateTime.now();
 	}
 	
@@ -66,6 +68,10 @@ public class Combustion implements Serializable {
 		return this.co2;
 	}
 	
+	public Money getCo2Cost() {
+		return this.co2Cost;
+	}
+	
 	public LocalDateTime getDateTime() {
 		return this.dateTime;
 	}
@@ -77,5 +83,4 @@ public class Combustion implements Serializable {
 	public MixedWaste getWaste() {
 		return this.waste;
 	}
-
 }
