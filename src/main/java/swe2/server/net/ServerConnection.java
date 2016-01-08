@@ -14,6 +14,8 @@ import swe2.server.data.DataBase;
 import swe2.shared.model.Combustion;
 import swe2.shared.model.Delivery;
 import swe2.shared.model.User;
+import swe2.shared.model.WasteStorage;
+import swe2.shared.model.UniformWaste;
 import swe2.shared.net.Credentials;
 import swe2.shared.net.DataPackage;
 import swe2.shared.net.RequestType;
@@ -84,7 +86,12 @@ public class ServerConnection implements Runnable {
 				sendBack(new DataPackage(RequestType.ERROR, "Combustionbericht konnte nicht gespeichert werden"));
 			break;
 		case PUT_DELIVERY:
-			if (data.addDelivery((Delivery) inbox.getData())) {
+			Delivery delivery = (Delivery) inbox.getData();
+			if (data.addDelivery( delivery )) {
+				UniformWaste waste = delivery.getWaste();
+				WasteStorage storage = data.getStorage();
+				storage.addWaste(waste.getWasteType(), waste.getWasteAmount());
+				data.saveStorage(storage);
 				sendBack(new DataPackage(RequestType.SUCCESS, "Deliverybericht wurde gespeichert"));
 			}
 			else
