@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="684" version="1.1" width="735" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="502" cy="22" fill="#000000" rx="8.0" ry="8.0" stroke="#000000" stroke-width="1"/>
+<rect fill="#00ff" height="50" rx="52" ry="52" stroke="#00ff" stroke-width="1" width="149" x="431" y="95"/>
+<rect fill="#ffffff" height="52" rx="52" ry="52" stroke="#000000" stroke-width="1" width="151" x="430" y="94"/>
+<rect fill="#ffffff" height="50" rx="52" ry="52" stroke="#ffffff" stroke-width="1" width="149" x="431" y="95"/>
+<text font-family="Dialog" font-size="12" x="467" y="114">
+Drücke Button</text>
+<text font-family="Dialog" font-size="12" x="442" y="130">
+"View Delivery Reports"</text>
+<rect fill="#00ff" height="50" rx="52" ry="52" stroke="#00ff" stroke-width="1" width="158" x="431" y="239"/>
+<rect fill="#ffffff" height="52" rx="52" ry="52" stroke="#000000" stroke-width="1" width="160" x="430" y="238"/>
+<rect fill="#ffffff" height="50" rx="52" ry="52" stroke="#ffffff" stroke-width="1" width="158" x="431" y="239"/>
+<text font-family="Dialog" font-size="12" x="471" y="258">
+Drücke Button</text>
+<text font-family="Dialog" font-size="12" x="442" y="274">
+um Fenster zu schließen</text>
+<polyline fill="none" points="502,30 502,95" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="495" x2="502" y1="83" y2="95"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="509" x2="502" y1="83" y2="95"/>
+<rect fill="#00ff" height="34" rx="36" ry="36" stroke="#00ff" stroke-width="1" width="101" x="15" y="151"/>
+<rect fill="#ffffff" height="36" rx="36" ry="36" stroke="#000000" stroke-width="1" width="103" x="14" y="150"/>
+<rect fill="#ffffff" height="34" rx="36" ry="36" stroke="#ffffff" stroke-width="1" width="101" x="15" y="151"/>
+<text font-family="Dialog" font-size="12" x="36" y="170">
+Ausloggen</text>
+<ellipse cx="58" cy="658" fill="#000000" rx="12.0" ry="12.0" stroke="#000000" stroke-width="1"/>
+<ellipse cx="58" cy="658" fill="#ffffff" rx="11.0" ry="11.0" stroke="#ffffff" stroke-width="1"/>
+<ellipse cx="57" cy="657" fill="#000000" rx="7.5" ry="7.5" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="58,184 58,646" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="51" x2="58" y1="634" y2="646"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="65" x2="58" y1="634" y2="646"/>
+<polyline fill="none" points="431,144 115,151" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="126" x2="115" y1="143" y2="151"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="127" x2="115" y1="157" y2="151"/>
+<polyline fill="none" points="502,144 502,239" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="495" x2="502" y1="227" y2="239"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="509" x2="502" y1="227" y2="239"/>
+<text font-family="Dialog" font-size="12" x="522" y="198">
+Tabelle mit Berichten wird angezeigt</text>
+<polyline fill="none" points="431,239 115,184" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="128" x2="115" y1="179" y2="184"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="125" x2="115" y1="192" y2="184"/>
+</svg>

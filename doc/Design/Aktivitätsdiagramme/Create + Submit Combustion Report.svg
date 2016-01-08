@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="1212" version="1.1" width="739" xmlns="http://www.w3.org/2000/svg">
+<polyline fill="none" points="622,769 622,839" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="615" x2="622" y1="827" y2="839"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="629" x2="622" y1="827" y2="839"/>
+<ellipse cx="358" cy="22" fill="#000000" rx="8.0" ry="8.0" stroke="#000000" stroke-width="1"/>
+<rect fill="#00ff" height="50" rx="52" ry="52" stroke="#00ff" stroke-width="1" width="138" x="287" y="79"/>
+<rect fill="#ffffff" height="52" rx="52" ry="52" stroke="#000000" stroke-width="1" width="140" x="286" y="78"/>
+<rect fill="#ffffff" height="50" rx="52" ry="52" stroke="#ffffff" stroke-width="1" width="138" x="287" y="79"/>
+<text font-family="Dialog" font-size="12" x="317" y="98">
+Drücke Button</text>
+<text font-family="Dialog" font-size="12" x="298" y="114">
+"Create Combustion"</text>
+<rect fill="#00ff" height="54" rx="56" ry="56" stroke="#00ff" stroke-width="1" width="110" x="223" y="1023"/>
+<rect fill="#ffffff" height="56" rx="56" ry="56" stroke="#000000" stroke-width="1" width="112" x="222" y="1022"/>
+<rect fill="#ffffff" height="54" rx="56" ry="56" stroke="#ffffff" stroke-width="1" width="110" x="223" y="1023"/>
+<text font-family="Dialog" font-size="12" x="241" y="1042">
+Client sendet</text>
+<text font-family="Dialog" font-size="12" x="234" y="1058">
+Daten an Server</text>
+<rect fill="#00ff" height="50" rx="52" ry="52" stroke="#00ff" stroke-width="1" width="177" x="15" y="775"/>
+<rect fill="#ffffff" height="52" rx="52" ry="52" stroke="#000000" stroke-width="1" width="179" x="14" y="774"/>
+<rect fill="#ffffff" height="50" rx="52" ry="52" stroke="#ffffff" stroke-width="1" width="177" x="15" y="775"/>
+<text font-family="Dialog" font-size="12" x="46" y="794">
+Operator-ID wird aus</text>
+<text font-family="Dialog" font-size="12" x="26" y="810">
+den Logindaten ausgelesen</text>
+<rect fill="#00ff" height="34" rx="36" ry="36" stroke="#00ff" stroke-width="1" width="165" x="559" y="583"/>
+<rect fill="#ffffff" height="36" rx="36" ry="36" stroke="#000000" stroke-width="1" width="167" x="558" y="582"/>
+<rect fill="#ffffff" height="34" rx="36" ry="36" stroke="#ffffff" stroke-width="1" width="165" x="559" y="583"/>
+<text font-family="Dialog" font-size="12" x="570" y="602">
+Fehlermeldung ausgeben</text>
+<polyline fill="none" points="358,30 358,79" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="351" x2="358" y1="67" y2="79"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="365" x2="358" y1="67" y2="79"/>
+<polyline fill="none" points="326,668 191,775" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="196" x2="191" y1="762" y2="775"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="204" x2="191" y1="773" y2="775"/>
+<polygon fill="#ffffff" points="362,502 378,518 362,534 346,518" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="362,502 378,518 362,534 346,518" stroke="#000000" stroke-width="1"/>
+<ellipse cx="370" cy="1186" fill="#000000" rx="12.0" ry="12.0" stroke="#000000" stroke-width="1"/>
+<ellipse cx="370" cy="1186" fill="#ffffff" rx="11.0" ry="11.0" stroke="#ffffff" stroke-width="1"/>
+<ellipse cx="369" cy="1185" fill="#000000" rx="7.5" ry="7.5" stroke="#000000" stroke-width="1"/>
+<rect fill="#00ff" height="34" rx="36" ry="36" stroke="#00ff" stroke-width="1" width="152" x="295" y="471"/>
+<rect fill="#ffffff" height="36" rx="36" ry="36" stroke="#000000" stroke-width="1" width="154" x="294" y="470"/>
+<rect fill="#ffffff" height="34" rx="36" ry="36" stroke="#ffffff" stroke-width="1" width="152" x="295" y="471"/>
+<text font-family="Dialog" font-size="12" x="315" y="490">
+Button "Start" klicken</text>
+<polyline fill="none" points="191,824 326,950" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="312" x2="326" y1="946" y2="950"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="322" x2="326" y1="936" y2="950"/>
+<rect fill="#00ff" height="50" rx="52" ry="52" stroke="#00ff" stroke-width="1" width="155" x="551" y="719"/>
+<rect fill="#ffffff" height="52" rx="52" ry="52" stroke="#000000" stroke-width="1" width="157" x="550" y="718"/>
+<rect fill="#ffffff" height="50" rx="52" ry="52" stroke="#ffffff" stroke-width="1" width="155" x="551" y="719"/>
+<text font-family="Dialog" font-size="12" x="562" y="738">
+CO2-Kosten berechnen,</text>
+<text font-family="Dialog" font-size="12" x="564" y="754">
+eintragen und anzeigen</text>
+<polyline fill="none" points="405,668 550,718" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="536" x2="550" y1="720" y2="718"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="540" x2="550" y1="707" y2="718"/>
+<polyline fill="none" points="646,583 646,166 397,166" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="409" x2="397" y1="159" y2="166"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="409" x2="397" y1="173" y2="166"/>
+<rect fill="#000000" height="7" stroke="#000000" stroke-width="1" width="80" x="318" y="166"/>
+<rect fill="#000000" height="7" stroke="#000000" stroke-width="1" width="71" x="326" y="398"/>
+<rect fill="#00ff" height="34" rx="36" ry="36" stroke="#00ff" stroke-width="1" width="121" x="487" y="311"/>
+<rect fill="#ffffff" height="36" rx="36" ry="36" stroke="#000000" stroke-width="1" width="123" x="486" y="310"/>
+<rect fill="#ffffff" height="34" rx="36" ry="36" stroke="#ffffff" stroke-width="1" width="121" x="487" y="311"/>
+<text font-family="Dialog" font-size="12" x="501" y="330">
+Menge eintragen</text>
+<rect fill="#00ff" height="50" rx="52" ry="52" stroke="#00ff" stroke-width="1" width="138" x="303" y="775"/>
+<rect fill="#ffffff" height="52" rx="52" ry="52" stroke="#000000" stroke-width="1" width="140" x="302" y="774"/>
+<rect fill="#ffffff" height="50" rx="52" ry="52" stroke="#ffffff" stroke-width="1" width="138" x="303" y="775"/>
+<text font-family="Dialog" font-size="12" x="314" y="794">
+Zeitstempel erstellen</text>
+<text font-family="Dialog" font-size="12" x="334" y="810">
+und eintragen</text>
+<rect fill="#00ff" height="34" rx="36" ry="36" stroke="#00ff" stroke-width="1" width="105" x="135" y="311"/>
+<rect fill="#ffffff" height="36" rx="36" ry="36" stroke="#000000" stroke-width="1" width="107" x="134" y="310"/>
+<rect fill="#ffffff" height="34" rx="36" ry="36" stroke="#ffffff" stroke-width="1" width="105" x="135" y="311"/>
+<text font-family="Dialog" font-size="12" x="146" y="330">
+Typ auswählen</text>
+<polyline fill="none" points="397,172 487,311" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="474" x2="487" y1="304" y2="311"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="486" x2="487" y1="297" y2="311"/>
+<polyline fill="none" points="318,172 239,311" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="238" x2="239" y1="297" y2="311"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="251" x2="239" y1="304" y2="311"/>
+<polyline fill="none" points="239,344 326,398" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="312" x2="326" y1="397" y2="398"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="319" x2="326" y1="385" y2="398"/>
+<polyline fill="none" points="487,344 396,398" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="402" x2="396" y1="385" y2="398"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="409" x2="396" y1="397" y2="398"/>
+<rect fill="#000000" height="7" stroke="#000000" stroke-width="1" width="80" x="326" y="662"/>
+<polyline fill="none" points="358,128 358,166" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="351" x2="358" y1="154" y2="166"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="365" x2="358" y1="154" y2="166"/>
+<rect fill="#000000" height="7" stroke="#000000" stroke-width="1" width="80" x="326" y="950"/>
+<polyline fill="none" points="326,956 326,1023" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="319" x2="326" y1="1011" y2="1023"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="333" x2="326" y1="1011" y2="1023"/>
+<polyline fill="none" points="363,668 363,775" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="356" x2="363" y1="763" y2="775"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="370" x2="363" y1="763" y2="775"/>
+<polyline fill="none" points="366,824 366,950" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="359" x2="366" y1="938" y2="950"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="373" x2="366" y1="938" y2="950"/>
+<polyline fill="none" points="361,404 361,471" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="354" x2="361" y1="459" y2="471"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="368" x2="361" y1="459" y2="471"/>
+<polyline fill="none" points="362,534 362,662" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="355" x2="362" y1="650" y2="662"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="369" x2="362" y1="650" y2="662"/>
+<text font-family="Dialog" font-size="12" x="299" y="603">
+! [Verbrennung läuft] &amp;&amp; [Eingaben korrekt]</text>
+<polyline fill="none" points="378,518 559,583" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="545" x2="559" y1="585" y2="583"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="550" x2="559" y1="572" y2="583"/>
+<text font-family="Dialog" font-size="12" x="445" y="537">
+ [Verbrennung läuft] || [Eingaben ungültig]</text>
+<rect fill="#00ff" height="50" rx="52" ry="52" stroke="#00ff" stroke-width="1" width="168" x="543" y="839"/>
+<rect fill="#ffffff" height="52" rx="52" ry="52" stroke="#000000" stroke-width="1" width="170" x="542" y="838"/>
+<rect fill="#ffffff" height="50" rx="52" ry="52" stroke="#ffffff" stroke-width="1" width="168" x="543" y="839"/>
+<text font-family="Dialog" font-size="12" x="554" y="858">
+CO2-Ausstoss berechnen,</text>
+<text font-family="Dialog" font-size="12" x="562" y="874">
+eintragen und anzeigen</text>
+<polyline fill="none" points="543,888 405,950" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="413" x2="405" y1="938" y2="950"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="418" x2="405" y1="951" y2="950"/>
+<rect fill="#00ff" height="34" rx="36" ry="36" stroke="#00ff" stroke-width="1" width="127" x="399" y="1023"/>
+<rect fill="#ffffff" height="36" rx="36" ry="36" stroke="#000000" stroke-width="1" width="129" x="398" y="1022"/>
+<rect fill="#ffffff" height="34" rx="36" ry="36" stroke="#ffffff" stroke-width="1" width="127" x="399" y="1023"/>
+<text font-family="Dialog" font-size="12" x="410" y="1042">
+starte Verbrennung</text>
+<polyline fill="none" points="405,956 405,1023" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="398" x2="405" y1="1011" y2="1023"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="412" x2="405" y1="1011" y2="1023"/>
+<rect fill="#000000" height="7" stroke="#000000" stroke-width="1" width="80" x="326" y="1134"/>
+<polyline fill="none" points="399,1056 399,1134" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="392" x2="399" y1="1122" y2="1134"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="406" x2="399" y1="1122" y2="1134"/>
+<polyline fill="none" points="326,1076 326,1134" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="319" x2="326" y1="1122" y2="1134"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="333" x2="326" y1="1122" y2="1134"/>
+<polyline fill="none" points="369,1140 369,1174" stroke="#000000" stroke-width="1"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="362" x2="369" y1="1162" y2="1174"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="376" x2="369" y1="1162" y2="1174"/>
+</svg>
