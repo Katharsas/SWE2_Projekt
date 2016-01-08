@@ -89,7 +89,7 @@
 <XPD:REF name="Namespace">b3LEzxFZaUyyzXeY5CVzIwAA</XPD:REF>
 <XPD:ATTR name="#Behaviors" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Behaviors[0]" type="UMLStateMachine" guid="O3x9LoquLEG2XQA5q8FCQwAA">
-<XPD:ATTR name="Name" type="string">StateMachine1</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Zustandsdiagramm OperatorController</XPD:ATTR>
 <XPD:REF name="Context">4oBxqoerWU+P/A9KAcHgOQAA</XPD:REF>
 <XPD:OBJ name="Top" type="UMLCompositeState" guid="YIRqICyk+0arwk4z2dfL6AAA">
 <XPD:ATTR name="Name" type="string">TOP</XPD:ATTR>
@@ -105,7 +105,7 @@
 <XPD:REF name="Outgoings[0]">LgLLcX/CqE+UGGWJ9vdzXQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Subvertices[1]" type="UMLCompositeState" guid="z39pYwXiy0O0I18Kz7+sWAAA">
-<XPD:ATTR name="Name" type="string">Operator will Combustion erstellen</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Menü wird angezeigt</XPD:ATTR>
 <XPD:REF name="ContainerState">YIRqICyk+0arwk4z2dfL6AAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">2</XPD:ATTR>
 <XPD:REF name="Views[0]">hJV8CrUqjkeW6G+BXDhmQgAA</XPD:REF>
@@ -150,7 +150,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLStatechartDiagram" guid="HnZhwxgbGUmWUrkeuMR8KgAA">
-<XPD:ATTR name="Name" type="string">StatechartDiagram1</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Zustandsdiagramm OperatorController</XPD:ATTR>
 <XPD:REF name="DiagramOwner">O3x9LoquLEG2XQA5q8FCQwAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLStatechartDiagramView" guid="OzGnJgkfokG6lgRyVInG5gAA">
 <XPD:REF name="Diagram">HnZhwxgbGUmWUrkeuMR8KgAA</XPD:REF>
@@ -173,7 +173,7 @@
 <XPD:REF name="Model">z39pYwXiy0O0I18Kz7+sWAAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="PPiLeqPS5USVKazI0Gmj4wAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="1q6BqtKkFkG1qRtMvfGnTQAA">
-<XPD:ATTR name="Text" type="string">Operator will Combustion erstellen</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Menü wird angezeigt</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="6PsdK/DiTE2gUydHrHgi5AAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -215,7 +215,7 @@
 <XPD:OBJ name="OwnedViews[3]" type="UMLStateView" guid="vjfktoxxPUyJYR9yniLK5wAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">376</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">476</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">80</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">93</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">40</XPD:ATTR>
@@ -239,14 +239,14 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="LineStyle" type="LineStyleKind">lsRectilinear</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">422,80;422,60;498,60;498,99;468,99</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">522,80;522,60;598,60;598,99;568,99</XPD:ATTR>
 <XPD:REF name="Model">cBOyCy3AWkijBzNqvBOmYAAA</XPD:REF>
 <XPD:REF name="Head">vjfktoxxPUyJYR9yniLK5wAA</XPD:REF>
 <XPD:REF name="Tail">vjfktoxxPUyJYR9yniLK5wAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="EdgeLabelView" guid="k+aWcZdg+ke0tvLz2ABIgAAA">
 <XPD:ATTR name="Alpha" type="real">-1,77981890317734</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">67,468511173732</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Eingaben inkorrekt || laufende Verbrennung</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[ Eingaben inkorrekt || laufende Verbrennung ] </XPD:ATTR>
 <XPD:REF name="Model">cBOyCy3AWkijBzNqvBOmYAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="EdgeLabelView" guid="y38fFMyj7UaH1fk/SGKrNAAA">
@@ -265,14 +265,14 @@
 <XPD:OBJ name="OwnedViews[5]" type="UMLTransitionView" guid="CF89UKkOgkC33XIOdrPmdAAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">197,99;376,99</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">197,99;476,99</XPD:ATTR>
 <XPD:REF name="Model">iQ3Qse7Do0y/ODNOGkadmwAA</XPD:REF>
 <XPD:REF name="Head">vjfktoxxPUyJYR9yniLK5wAA</XPD:REF>
 <XPD:REF name="Tail">hJV8CrUqjkeW6G+BXDhmQgAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="EdgeLabelView" guid="TyKLed1khEy6L8wcnB15dAAA">
 <XPD:ATTR name="Alpha" type="real">1,5707963267949</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">15</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Button drücken</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Button &quot;Create Combustion&quot; wird gedrückt</XPD:ATTR>
 <XPD:REF name="Model">iQ3Qse7Do0y/ODNOGkadmwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="EdgeLabelView" guid="ybFQS+w7VUaLtVrbsG7yVQAA">
@@ -291,7 +291,7 @@
 <XPD:OBJ name="OwnedViews[6]" type="UMLStateView" guid="GzFljFPNhEGl53CURRUAdQAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">312</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">412</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">244</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">219</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">40</XPD:ATTR>
@@ -314,14 +314,14 @@
 <XPD:OBJ name="OwnedViews[7]" type="UMLTransitionView" guid="St2GM9aS0k6D8M+wp6zxPAAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">422,119;421,244</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">522,119;521,244</XPD:ATTR>
 <XPD:REF name="Model">4CRBEQVka02bIL04vixW7QAA</XPD:REF>
 <XPD:REF name="Head">GzFljFPNhEGl53CURRUAdQAA</XPD:REF>
 <XPD:REF name="Tail">vjfktoxxPUyJYR9yniLK5wAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="EdgeLabelView" guid="lx1GbmAe4EedtBgVYsqoWwAA">
 <XPD:ATTR name="Alpha" type="real">-3,05485425157389</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">23,0867927612304</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Eingaben korrekt</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">[ Eingaben korrekt &amp;&amp; keine laufende Verbrennung ] </XPD:ATTR>
 <XPD:REF name="Model">4CRBEQVka02bIL04vixW7QAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="EdgeLabelView" guid="jns+SGxTIkKJ80NgiYfv4wAA">
@@ -340,7 +340,7 @@
 <XPD:OBJ name="OwnedViews[8]" type="UMLFinalStateView" guid="Ab+cm0B8J0mBddjW+e0aKQAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">408</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">508</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">372</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">26</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">26</XPD:ATTR>
@@ -349,7 +349,7 @@
 <XPD:OBJ name="OwnedViews[9]" type="UMLTransitionView" guid="fHgflgQg8Uu/g4Cxgoe15AAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">421,283;420,372</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">521,283;520,372</XPD:ATTR>
 <XPD:REF name="Model">4+uG+riAKkudataeDOx8egAA</XPD:REF>
 <XPD:REF name="Head">Ab+cm0B8J0mBddjW+e0aKQAA</XPD:REF>
 <XPD:REF name="Tail">GzFljFPNhEGl53CURRUAdQAA</XPD:REF>
@@ -386,7 +386,7 @@
 <XPD:REF name="Views[3]">tQr5YqxrDEmGrY+/rA8XagAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Transitions[1]" type="UMLTransition" guid="cBOyCy3AWkijBzNqvBOmYAAA">
-<XPD:ATTR name="Name" type="string">Eingaben inkorrekt || laufende Verbrennung</XPD:ATTR>
+<XPD:ATTR name="GuardCondition" type="string">Eingaben inkorrekt || laufende Verbrennung</XPD:ATTR>
 <XPD:REF name="StateMachine">O3x9LoquLEG2XQA5q8FCQwAA</XPD:REF>
 <XPD:REF name="Source">7tqDPOdHIU60rmO68r49FQAA</XPD:REF>
 <XPD:REF name="Target">7tqDPOdHIU60rmO68r49FQAA</XPD:REF>
@@ -397,7 +397,7 @@
 <XPD:REF name="Views[3]">zpVhP6UlSE6s2KKQmy5D4gAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Transitions[2]" type="UMLTransition" guid="iQ3Qse7Do0y/ODNOGkadmwAA">
-<XPD:ATTR name="Name" type="string">Button drücken</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Button &quot;Create Combustion&quot; wird gedrückt</XPD:ATTR>
 <XPD:REF name="StateMachine">O3x9LoquLEG2XQA5q8FCQwAA</XPD:REF>
 <XPD:REF name="Source">z39pYwXiy0O0I18Kz7+sWAAA</XPD:REF>
 <XPD:REF name="Target">7tqDPOdHIU60rmO68r49FQAA</XPD:REF>
@@ -408,7 +408,7 @@
 <XPD:REF name="Views[3]">0V3QxLWO7kWJ/1abVEI+9AAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Transitions[3]" type="UMLTransition" guid="4CRBEQVka02bIL04vixW7QAA">
-<XPD:ATTR name="Name" type="string">Eingaben korrekt</XPD:ATTR>
+<XPD:ATTR name="GuardCondition" type="string">Eingaben korrekt &amp;&amp; keine laufende Verbrennung</XPD:ATTR>
 <XPD:REF name="StateMachine">O3x9LoquLEG2XQA5q8FCQwAA</XPD:REF>
 <XPD:REF name="Source">7tqDPOdHIU60rmO68r49FQAA</XPD:REF>
 <XPD:REF name="Target">pC225XZ6BECDR+RnkxBX3gAA</XPD:REF>
