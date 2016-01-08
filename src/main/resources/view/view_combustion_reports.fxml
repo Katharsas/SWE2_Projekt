@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.FlowPane?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity"
-	minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0"
-	prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="swe2.client.controller.operator.ViewCombustionController">
-
-	<VBox prefHeight="200.0" prefWidth="300.0">
-		<children>
-			<ListView fx:id="listViewCombustion" prefHeight="200.0"
-				prefWidth="200.0" />
-			<HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
-				<children>
-					<Button fx:id="backButton" mnemonicParsing="false" onAction="#back"
-						text="Back" />
-				</children>
-			</HBox>
-		</children>
-	</VBox>
-
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="swe2.client.controller.operator.ViewCombustionController">
+  <VBox prefHeight="200.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <children>
+      <ListView fx:id="listViewCombustion" prefHeight="200.0" prefWidth="200.0" />
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+        <children>
+          <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" text="Back" />
+        </children>
+      </HBox>
+    </children>
+  </VBox>
 </AnchorPane>
