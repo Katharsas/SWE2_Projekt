@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="559" version="1.1" width="1027" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#ffffff" height="126" stroke="#ffffff" stroke-width="1" width="286" x="342" y="14"/>
+<rect fill="none" height="126" stroke="#000000" stroke-width="1" width="286" x="342" y="14"/>
+<text font-family="Dialog" font-size="12" x="444" y="28">
+TaskController</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="286" x="342" y="38"/>
+<text font-family="Dialog" font-size="12" x="346" y="53">
+clientConnection : client</text>
+<text font-family="Dialog" font-size="12" x="346" y="70">
+operatorTaskStage : Stage</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="286" x="342" y="88"/>
+<text font-family="Dialog" font-size="12" x="346" y="103">
+back()</text>
+<text font-family="Dialog" font-size="12" x="346" y="120">
+setOperatorTaskStage(operatorTaskStage : Stage)</text>
+<rect fill="#ffffff" height="194" stroke="#ffffff" stroke-width="1" width="302" x="22" y="222"/>
+<rect fill="none" height="194" stroke="#000000" stroke-width="1" width="302" x="22" y="222"/>
+<text font-family="Dialog" font-size="12" x="112" y="236">
+CombustionController</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="302" x="22" y="246"/>
+<text font-family="Dialog" font-size="12" x="26" y="261">
+combustionFlag : boolean</text>
+<text font-family="Dialog" font-size="12" x="26" y="278">
+combusted : MixedWaste</text>
+<text font-family="Dialog" font-size="12" x="26" y="295">
+lblStatus : Label</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="302" x="22" y="305"/>
+<text font-family="Dialog" font-size="12" x="26" y="320">
+startCombustion() : boolean</text>
+<text font-family="Dialog" font-size="12" x="26" y="337">
+endCombustion() : MixedWaste</text>
+<text font-family="Dialog" font-size="12" x="26" y="354">
+getCombustionState() : boolean</text>
+<text font-family="Dialog" font-size="12" x="26" y="371">
+setLabelText(text : String,hexcolor : String)</text>
+<text font-family="Dialog" font-size="12" x="26" y="388">
+setLabelText(text : String,isError : boolean)</text>
+<text font-family="Dialog" font-size="12" x="26" y="405">
+createHex(hex : String) : String</text>
+<polyline fill="none" points="323,222 342,139" stroke="#333399" stroke-width="1"/>
+<polygon fill="#ffffff" points="342,139 346,152 332,149" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="342,139 346,152 332,149" stroke="#333399" stroke-width="1"/>
+<rect fill="#ffffff" height="75" stroke="#ffffff" stroke-width="1" width="169" x="182" y="470"/>
+<rect fill="none" height="75" stroke="#000000" stroke-width="1" width="169" x="182" y="470"/>
+<text font-family="Dialog" font-size="12" x="187" y="484">
+CreateCombustionController</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="169" x="182" y="494"/>
+<text font-family="Dialog" font-size="12" x="186" y="509">
+txtCO2 : TextField</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="169" x="182" y="519"/>
+<text font-family="Dialog" font-size="12" x="186" y="534">
+startCombustionClick()</text>
+<polyline fill="none" points="323,470 323,415" stroke="#333399" stroke-width="1"/>
+<polygon fill="#ffffff" points="323,415 330,427 316,427" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="323,415 330,427 316,427" stroke="#333399" stroke-width="1"/>
+<rect fill="#ffffff" height="71" stroke="#ffffff" stroke-width="1" width="154" x="14" y="470"/>
+<rect fill="none" height="71" stroke="#000000" stroke-width="1" width="154" x="14" y="470"/>
+<text font-family="Dialog" font-size="12" x="19" y="484">
+EndCombustionController</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="154" x="14" y="494"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="154" x="14" y="515"/>
+<text font-family="Dialog" font-size="12" x="18" y="530">
+endCombustionClick()</text>
+<polyline fill="none" points="141,470 141,415" stroke="#333399" stroke-width="1"/>
+<polygon fill="#ffffff" points="141,415 148,427 134,427" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="141,415 148,427 134,427" stroke="#333399" stroke-width="1"/>
+<rect fill="#ffffff" height="75" stroke="#ffffff" stroke-width="1" width="240" x="334" y="222"/>
+<rect fill="none" height="75" stroke="#000000" stroke-width="1" width="240" x="334" y="222"/>
+<text font-family="Dialog" font-size="12" x="380" y="236">
+ViewCombustionController</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="240" x="334" y="246"/>
+<text font-family="Dialog" font-size="12" x="338" y="261">
+listViewCombustion : ListView</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="240" x="334" y="271"/>
+<text font-family="Dialog" font-size="12" x="338" y="286">
+parseCombustion(c : Combustion) : String</text>
+<polyline fill="none" points="374,222 374,139" stroke="#333399" stroke-width="1"/>
+<polygon fill="#ffffff" points="374,139 381,151 367,151" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="374,139 381,151 367,151" stroke="#333399" stroke-width="1"/>
+<rect fill="#ffffff" height="75" stroke="#ffffff" stroke-width="1" width="191" x="590" y="222"/>
+<rect fill="none" height="75" stroke="#000000" stroke-width="1" width="191" x="590" y="222"/>
+<text font-family="Dialog" font-size="12" x="624" y="236">
+ViewDeliveryController</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="191" x="590" y="246"/>
+<text font-family="Dialog" font-size="12" x="594" y="261">
+listViewDelivery : ListView</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="191" x="590" y="271"/>
+<text font-family="Dialog" font-size="12" x="594" y="286">
+parseDelivery(d : Delivery) : String</text>
+<polyline fill="none" points="590,222 590,139" stroke="#333399" stroke-width="1"/>
+<polygon fill="#ffffff" points="590,139 597,151 583,151" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="590,139 597,151 583,151" stroke="#333399" stroke-width="1"/>
+<rect fill="#ffffff" height="71" stroke="#ffffff" stroke-width="1" width="183" x="830" y="222"/>
+<rect fill="none" height="71" stroke="#000000" stroke-width="1" width="183" x="830" y="222"/>
+<text font-family="Dialog" font-size="12" x="864" y="236">
+ViewWasteController</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="183" x="830" y="246"/>
+<text font-family="Dialog" font-size="12" x="834" y="261">
+listViewWasteStorage : ListView</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="183" x="830" y="271"/>
+<polyline fill="none" points="830,222 627,139" stroke="#333399" stroke-width="1"/>
+<polygon fill="#ffffff" points="627,139 640,137 635,150" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="627,139 640,137 635,150" stroke="#333399" stroke-width="1"/>
+</svg>
