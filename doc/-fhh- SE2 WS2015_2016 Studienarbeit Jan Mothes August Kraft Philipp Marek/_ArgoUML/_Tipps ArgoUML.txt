@@ -1,0 +1,3 @@
+Diagram-Art auswählen: Oben rechts Symbole
+Komplett entfernen ("Del" entfernt nur von der Malfläche): Strg + Del 
+Abspeichern als SVG erlaubt verlustfreises Zoomen (zum Anzeigen Browser benutzen)
